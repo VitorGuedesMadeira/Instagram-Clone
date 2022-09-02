@@ -1,5 +1,5 @@
 .main-section {
   width: 375px; /* fixed width for initial mobile structure */
-  background-color: lightgreen;
+  background-color: red;
   min-height: 100vh;
 }

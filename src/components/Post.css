@@ -39,7 +39,8 @@
   align-items: center;
   width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: cadetblue;
+  background-image: url(https://picsum.photos/200);
+  background-size: cover;
 }
 
 /* USER DOWN BAR */

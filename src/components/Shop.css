@@ -72,7 +72,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: brown;
+  background-image: url(https://picsum.photos/200);
+  background-size: cover;
   width: calc((100% / 2) - 1px);
   aspect-ratio: 1 / 1;
 }

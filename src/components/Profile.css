@@ -138,5 +138,6 @@
   align-items: center;
   width: calc((100% / 3) - 1px);
   aspect-ratio: 1 / 1;
-  background-color: rgb(107, 107, 42);
+  background-image: url(https://picsum.photos/200);
+  background-size: cover;
 }

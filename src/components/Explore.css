@@ -28,7 +28,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkslategray;
+  background-image: url(https://picsum.photos/200);
+  background-size: cover;
   width: calc((100% / 3) - 1px);
   aspect-ratio: 1 / 1;
 }
