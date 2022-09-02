@@ -1,0 +1,22 @@
+.profile-navigation-bar {
+  position: fixed;
+  width: 375px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.profile-navigation-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-navigation-links a {
+  text-decoration: none;
+  color: white;
+}
