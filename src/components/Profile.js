@@ -43,6 +43,40 @@ const Profile = () => {
       <div className="profile-edit-profile-section">
         <div className="edit-profile">Edit profile</div>
       </div>
+
+      <div className="profile-userinterfaces">
+        <div className="userinterfaces-title">Story Highlights</div>
+        <div className="userinterfaces-button">
+          <div>Icon1</div>
+          <div>Icon2</div>
+          <div>Icon3</div>
+          <div>Icon4</div>
+        </div>
+      </div>
+
+      <div className="profile-posts">
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+        <div className="profile-posts-image">image</div>
+      </div>
     </div>
   );
 };

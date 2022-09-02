@@ -80,8 +80,11 @@
 /* PROFILE EDIT PROFILE */
 
 .profile-edit-profile-section {
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 140px;
+  height: 40px;
   width: 375px;
   background-color: darkorange;
   padding: 10px;
@@ -89,6 +92,51 @@
 
 .edit-profile {
   display: flex;
+  width: 375px;
   justify-content: center;
   background-color: blanchedalmond;
+}
+
+/* PROFILE USER INTERFACES */
+
+.profile-userinterfaces {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 180px;
+  background-color: red;
+  justify-content: center;
+  width: 375px;
+  height: 60px;
+}
+
+.userinterfaces-title {
+  padding: 0 10px;
+}
+
+.userinterfaces-button {
+  display: flex;
+  align-items: flex-end;
+  background-color: aqua;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0 10px;
+}
+
+/* PROFILE POSTS */
+
+.profile-posts {
+  display: flex;
+  padding-top: 240px;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.profile-posts-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% / 3) - 1px);
+  aspect-ratio: 1 / 1;
+  background-color: yellow;
 }
