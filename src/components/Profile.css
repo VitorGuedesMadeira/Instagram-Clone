@@ -1,3 +1,5 @@
+/* PROFILE NAVIGATION BAR */
+
 .profile-navigation-bar {
   position: fixed;
   width: 375px;
@@ -19,4 +21,74 @@
 .profile-navigation-links a {
   text-decoration: none;
   color: white;
+}
+
+/* PROFILE USER PICTURE AND INFO */
+
+.profile-user-picture-info {
+  display: flex;
+  position: fixed;
+  top: 40px;
+  height: 60px;
+  width: 375px;
+  background-color: red;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.profile-user-picture {
+  flex: 1;
+}
+
+.profile-posts-followers-following {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 2;
+}
+
+.profile-posts-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-followers-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-following-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* USERNAME AND BIO DESCRIPTION */
+
+.profile-username-biodescription {
+  display: flex;
+  flex-direction: column;
+  background-color: blueviolet;
+  position: fixed;
+  width: 375px;
+  top: 100px;
+  padding: 0 10px;
+  height: 40px;
+}
+
+/* PROFILE EDIT PROFILE */
+
+.profile-edit-profile-section {
+  position: fixed;
+  top: 140px;
+  width: 375px;
+  background-color: darkorange;
+  padding: 10px;
+}
+
+.edit-profile {
+  display: flex;
+  justify-content: center;
+  background-color: blanchedalmond;
 }
