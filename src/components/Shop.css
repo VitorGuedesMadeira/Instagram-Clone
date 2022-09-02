@@ -22,3 +22,57 @@
   text-decoration: none;
   color: white;
 }
+
+/* SHOP OPTIONS */
+
+.shop-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  width: 375px;
+  top: 40px;
+  background-color: dodgerblue;
+  padding: 0 10px;
+  height: 80px;
+}
+
+.shop-search-bar {
+  height: 25px;
+  background-color: orange;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.shop-userinterfaces-buttons {
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-userinterface-button {
+  background-color: orange;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* SHOPT USERINTERFACES */
+
+.shop-userinterfaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  padding-top: 120px;
+}
+
+.shop-userinterface {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+  width: calc((100% / 2) - 1px);
+  aspect-ratio: 1 / 1;
+}

@@ -31,7 +31,7 @@
   top: 40px;
   height: 60px;
   width: 375px;
-  background-color: red;
+  background-color: rgb(196, 54, 54);
   padding: 0 10px;
   align-items: center;
 }
@@ -104,7 +104,7 @@
   flex-direction: column;
   position: fixed;
   top: 180px;
-  background-color: red;
+  background-color: rgb(91, 61, 151);
   justify-content: center;
   width: 375px;
   height: 60px;
@@ -138,5 +138,5 @@
   align-items: center;
   width: calc((100% / 3) - 1px);
   aspect-ratio: 1 / 1;
-  background-color: yellow;
+  background-color: rgb(107, 107, 42);
 }

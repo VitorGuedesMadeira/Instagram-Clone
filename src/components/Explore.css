@@ -7,8 +7,28 @@
   align-items: center;
   height: 40px;
   padding: 0 10px;
+  position: fixed;
+  width: 375px;
 }
 
 .explore-search-bar {
   width: 100%;
+}
+
+/* EXPLORE POSTS */
+
+.explore-posts {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  gap: 1px;
+}
+
+.explore-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategray;
+  width: calc((100% / 3) - 1px);
+  aspect-ratio: 1 / 1;
 }

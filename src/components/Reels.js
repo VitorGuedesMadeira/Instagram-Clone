@@ -1,9 +1,10 @@
 import React from 'react';
+import './Reels.css';
 
 const Reels = () => {
   const reels = 'reels';
   return (
-    <div>
+    <div className="reels-section">
       {reels}
     </div>
   );
