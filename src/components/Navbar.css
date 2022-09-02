@@ -1,0 +1,19 @@
+.navigation-bar {
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  width: 375px;
+  padding: 0 10px;
+}
+
+.navigation-ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}

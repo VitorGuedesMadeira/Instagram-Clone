@@ -1,0 +1,45 @@
+/* HOME NAV BAR */
+
+.home-navigation-bar {
+  position: fixed;
+  width: 375px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.home-navigation-links {
+  display: flex;
+  gap: 10px;
+}
+
+.home-navigation-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* STORIES */
+
+.home-stories {
+  position: fixed;
+  top: 40px;
+  width: 375px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: grey;
+  padding: 0 10px;
+}
+
+/* HOME POSTS */
+
+.home-posts {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
