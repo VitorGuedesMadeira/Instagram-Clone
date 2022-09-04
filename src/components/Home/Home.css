@@ -10,6 +10,7 @@
   align-items: center;
   height: 40px;
   padding: 0 10px;
+  z-index: 1;
 }
 
 .instagram-logo {
@@ -35,7 +36,7 @@
 /* STORIES */
 
 .home-stories {
-  position: fixed;
+  position: absolute;
   top: 40px;
   width: 375px;
   display: flex;
