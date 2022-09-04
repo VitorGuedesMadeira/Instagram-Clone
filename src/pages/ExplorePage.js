@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import Explore from '../components/Explore';
+import Explore from '../components/Explore/Explore';
 
 const ExplorePage = () => (
   <div>

@@ -1,9 +1,9 @@
 import React from 'react';
-import Post from './Post';
-import plusIcon from '../assets/icons/new-post.png';
-import likeIcon from '../assets/icons/like.png';
-import commentIcon from '../assets/icons/comment-balloon-nav.png';
+import plusIcon from '../../assets/icons/new-post.png';
+import likeIcon from '../../assets/icons/like.png';
+import commentIcon from '../../assets/icons/comment-balloon-nav.png';
 import './Home.css';
+import Post from './Post/Post';
 
 const Home = () => {
   const stories = 'STORIES';
