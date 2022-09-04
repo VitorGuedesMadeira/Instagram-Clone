@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'Segoe';
+  src: url(./assets/fonts/Segoe\ UI.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe', sans-serif;
 }
 
 body {

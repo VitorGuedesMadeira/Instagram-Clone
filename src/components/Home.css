@@ -12,10 +12,15 @@
   padding: 0 10px;
 }
 
+.instagram-logo-div {
+  display: flex;
+  align-items: center;
+}
+
 .home-navigation-links {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .home-navigation-links a {
@@ -43,4 +48,21 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+/* ICONS */
+
+.plus-icon {
+  width: 20px;
+  filter: invert(100);
+}
+
+.like-icon {
+  width: 25px;
+  filter: invert(100);
+}
+
+.comment-icon {
+  width: 20px;
+  filter: invert(100);
 }

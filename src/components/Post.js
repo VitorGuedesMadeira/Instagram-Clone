@@ -1,5 +1,9 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
+import likeIcon from '../assets/icons/like.png';
+import commentsIcon from '../assets/icons/comment.png';
+import redirectIcon from '../assets/icons/direct.png';
+import favoriteIcon from '../assets/icons/favorite.png';
 import './Post.css';
 
 const Post = () => {
@@ -22,12 +26,18 @@ const Post = () => {
 
       <div className="user-down-bar">
         <div className="likes-comments-redirect">
-          <div className="likes-button">❤️</div>
-          <div className="comments-button">💬</div>
-          <div className="redirect-button">➡️</div>
+          <a href="https://google.com/">
+            <img className="likes-button" src={likeIcon} alt="like-icon" />
+          </a>
+          <a href="https://google.com/">
+            <img className="comments-button" src={commentsIcon} alt="comments-icon" />
+          </a>
+          <a href="https://google.com/">
+            <img className="redirect-button" src={redirectIcon} alt="redirect-icon" />
+          </a>
         </div>
         <div className="favorite">
-          🚩
+          <img className="favorite-button" src={favoriteIcon} alt="favorite-icon" />
         </div>
       </div>
 

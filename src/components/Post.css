@@ -82,3 +82,21 @@
   gap: 10px;
   padding: 0 10px;
 }
+
+/* POST ICONS */
+
+.likes-button {
+  width: 20px;
+}
+
+.comments-button {
+  width: 20px;
+}
+
+.redirect-button {
+  width: 20px;
+}
+
+.favorite-button {
+  width: 20px;
+}
