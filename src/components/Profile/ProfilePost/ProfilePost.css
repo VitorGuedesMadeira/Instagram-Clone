@@ -1,0 +1,18 @@
+/* PROFILE POSTS */
+
+.profile-posts {
+  display: flex;
+  padding-top: 240px;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.profile-posts-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% / 3) - 1px);
+  aspect-ratio: 1 / 1;
+  background-image: url(https://picsum.photos/200);
+  background-size: cover;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+import ProfilePost from './ProfilePost/ProfilePost';
 
 const Profile = () => {
   const userName = 'userName';
@@ -55,27 +56,27 @@ const Profile = () => {
       </div>
 
       <div className="profile-posts">
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
-        <div className="profile-posts-image">image</div>
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
+        <ProfilePost />
       </div>
     </div>
   );
