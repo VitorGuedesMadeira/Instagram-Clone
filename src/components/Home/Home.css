@@ -36,15 +36,17 @@
   width: 375px;
   display: flex;
   align-items: center;
-  height: 40px;
+  justify-content: center;
+  height: 75px;
   background-color: grey;
   padding: 0 10px;
+  gap: 15px;
 }
 
 /* HOME POSTS */
 
 .home-posts {
-  padding-top: 80px;
+  padding-top: 115px;
   display: flex;
   flex-direction: column;
   gap: 30px;

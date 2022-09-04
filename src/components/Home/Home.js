@@ -4,9 +4,10 @@ import likeIcon from '../../assets/icons/like.png';
 import commentIcon from '../../assets/icons/comment-balloon-nav.png';
 import './Home.css';
 import Post from './Post/Post';
+import Story from './Story/Story';
 
 const Home = () => {
-  const stories = 'STORIES';
+  const stories = 'https://google.com/';
   return (
     <div className="home-section">
       <div className="home-navigation-bar">
@@ -14,7 +15,7 @@ const Home = () => {
           <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="instagram-logo" />
         </div>
         <div className="home-navigation-links">
-          <a href="https://google.com/">
+          <a href={stories}>
             <img className="plus-icon" src={plusIcon} alt="plus-icon" />
           </a>
           <a href="https://google.com/">
@@ -27,7 +28,12 @@ const Home = () => {
       </div>
 
       <div className="home-stories">
-        {stories}
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
       </div>
 
       <div className="home-posts">

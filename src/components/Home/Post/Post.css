@@ -20,12 +20,12 @@
 .user-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .user-picture {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   background-color: blue;
   border: 2px solid red;
   border-radius: 50%;

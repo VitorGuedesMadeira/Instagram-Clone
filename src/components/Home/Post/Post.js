@@ -16,7 +16,7 @@ const Post = () => {
           <div className="user-name">userName</div>
         </div>
         <div className="user-post-options">
-          ⁞
+          ...
         </div>
       </div>
 

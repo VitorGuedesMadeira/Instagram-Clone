@@ -121,4 +121,5 @@
   width: 100%;
   justify-content: space-evenly;
   padding: 0 10px;
+  cursor: pointer;
 }
