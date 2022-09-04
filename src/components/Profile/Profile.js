@@ -17,8 +17,8 @@ const Profile = () => {
       </div>
 
       <div className="profile-user-picture-info">
-        <div className="profile-user-picture">
-          userImage
+        <div className="profile-user-picture-div">
+          <div className="profile-user-picture" />
         </div>
         <div className="profile-posts-followers-following">
           <div className="profile-posts-counter">

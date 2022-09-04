@@ -31,6 +31,14 @@
   border-radius: 50%;
 }
 
+.user-post-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
 /* USER POST PICTURE */
 
 .user-post-picture {
@@ -94,9 +102,10 @@
 }
 
 .redirect-button {
-  width: 20px;
+  width: 16px;
 }
 
 .favorite-button {
-  width: 20px;
+  width: 16px;
+  cursor: pointer;
 }

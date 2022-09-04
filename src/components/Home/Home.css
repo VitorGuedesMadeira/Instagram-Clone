@@ -12,9 +12,13 @@
   padding: 0 10px;
 }
 
-.instagram-logo-div {
+.instagram-logo {
   display: flex;
   align-items: center;
+}
+
+.instagram-logo img {
+  filter: invert(1);
 }
 
 .home-navigation-links {
