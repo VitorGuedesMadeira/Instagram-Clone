@@ -10,6 +10,7 @@
   align-items: center;
   height: 40px;
   padding: 0 10px;
+  z-index: 1;
 }
 
 .shop-navigation-links {
@@ -29,7 +30,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   width: 375px;
   top: 40px;
   background-color: dodgerblue;
@@ -81,6 +82,6 @@
 /* SHOP ICONS */
 
 .hamburger-icon {
-  width: 23px;
+  width: 21px;
   filter: invert(100);
 }

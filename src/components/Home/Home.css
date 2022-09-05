@@ -46,7 +46,7 @@
   height: 75px;
   background-color: grey;
   padding: 0 10px;
-  gap: 15px;
+  gap: 10px;
   border-bottom: 1px solid lightgray;
   overflow-x: auto;
 }

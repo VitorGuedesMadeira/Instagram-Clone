@@ -1,22 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Profile.css';
 import ProfilePost from './ProfilePost/ProfilePost';
 import plusIcon from '../../assets/icons/new-post.png';
 import hamburgerIcon from '../../assets/icons/hamburger.png';
 
 const Profile = () => {
-  const userName = 'Posts';
+  useEffect(() => {
+    window.scrollTo(20, 0);
+  });
+
   return (
     <div className="profile-section">
       <div className="profile-navigation-bar">
         <div className="profile-username">
-          {userName}
+          userName
         </div>
         <div className="profile-navigation-links">
-          <a href={userName}>
+          <a href="https://google.com/">
             <img className="plus-icon" src={plusIcon} alt="plus-icon" />
           </a>
-          <a href={userName}>
+          <a href="https://google.com/">
             <img className="hamburger-icon" src={hamburgerIcon} alt="hamburger-icon" />
           </a>
         </div>
@@ -29,7 +32,7 @@ const Profile = () => {
         <div className="profile-posts-followers-following">
           <div className="profile-posts-counter">
             <p>74</p>
-            <p>{userName}</p>
+            <p>Posts</p>
           </div>
           <div className="profile-followers-counter">
             <p>419</p>

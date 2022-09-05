@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import plusIcon from '../../assets/icons/new-post.png';
 import likeIcon from '../../assets/icons/like.png';
 import commentIcon from '../../assets/icons/comment-balloon-nav.png';
@@ -8,7 +9,10 @@ import Story from './Story/Story';
 import UserStory from './UserStory/UserStory';
 
 const Home = () => {
-  const stories = 'https://google.com/';
+  useEffect(() => {
+    window.scrollTo(20, 0);
+  });
+
   return (
     <div className="home-section">
       <div className="home-navigation-bar">
@@ -16,15 +20,15 @@ const Home = () => {
           <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="instagram-logo" />
         </div>
         <div className="home-navigation-links">
-          <a href={stories}>
+          <a href="https://google.com/">
             <img className="plus-icon" src={plusIcon} alt="plus-icon" />
           </a>
           <a href="https://google.com/">
             <img className="like-icon" src={likeIcon} alt="like-icon" />
           </a>
-          <a href="https://google.com/">
+          <Link to="/messages">
             <img className="comment-icon" src={commentIcon} alt="comment-icon" />
-          </a>
+          </Link>
         </div>
       </div>
 

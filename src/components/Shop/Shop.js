@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import hamburgerIcon from '../../assets/icons/hamburger.png';
 import './Shop.css';
 
 const Shop = () => {
-  const userName = 'shop';
+  useEffect(() => {
+    window.scrollTo(20, 0);
+  });
+
   return (
     <div className="shop-section">
       <div className="shop-navigation-bar">
         <div className="shop-title">
-          {userName}
+          shop
         </div>
         <div className="shop-navigation-links">
           <a href="https://google.com/">🗓️</a>
-          <a href={userName}>
+          <a href="https://google.com/">
             <img className="hamburger-icon" src={hamburgerIcon} alt="hamburger-icon" />
           </a>
         </div>

@@ -45,8 +45,8 @@
 }
 
 .profile-user-picture {
-  background-color: yellow;
-  border: 2px solid red;
+  background-color: white;
+  border: 1px solid blue;
   width: 50px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -85,7 +85,7 @@
   width: 375px;
   flex-direction: column;
   justify-content: center;
-  background-color: blueviolet;
+  background-color: darkolivegreen;
   padding: 0 10px;
   top: 100px;
   height: 40px;
@@ -151,6 +151,6 @@
 }
 
 .hamburger-icon {
-  width: 23px;
+  width: 21px;
   filter: invert(100);
 }

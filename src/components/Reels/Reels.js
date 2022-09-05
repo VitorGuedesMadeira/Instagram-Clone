@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Reels.css';
 
 const Reels = () => {
-  const reels = 'reels';
+  useEffect(() => {
+    window.scrollTo(20, 0);
+  });
+
   return (
     <div className="reels-section">
-      {reels}
+      reels
     </div>
   );
 };

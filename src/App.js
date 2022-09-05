@@ -6,6 +6,7 @@ import ExplorePage from './pages/ExplorePage';
 import ReelsPage from './pages/ReelsPage';
 import ShopPage from './pages/ShopPage';
 import ProfilePage from './pages/ProfilePage';
+import MessagesPage from './pages/MessagesPage';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/reels" element={<ReelsPage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/messages" element={<MessagesPage />} />
         </Routes>
       </main>
     </>

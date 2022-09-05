@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import searchIcon from '../../assets/icons/search.png';
 import './Explore.css';
 
 const Explore = () => {
-  const explore = 'exploreImage';
+  useEffect(() => {
+    window.scrollTo(20, 0);
+  });
+
   return (
     <div className="explore-section">
       <div className="explore-navigation-bar">
@@ -12,27 +15,27 @@ const Explore = () => {
       </div>
 
       <div className="explore-posts">
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
-        <div className="explore-image">{explore}</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
+        <div className="explore-image">exploreImage</div>
       </div>
     </div>
   );
