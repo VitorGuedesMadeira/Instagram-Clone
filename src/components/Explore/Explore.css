@@ -11,11 +11,21 @@
   width: 375px;
 }
 
+.search-div {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 10px;
+  background-color: white;
+}
+
 .explore-search-bar {
   width: 100%;
   border: none;
-  height: 20px;
-  padding: 0 10px;
+  padding: 5px 5px;
+  outline: none;
+  background-color: transparent;
 }
 
 /* EXPLORE POSTS */
@@ -40,6 +50,6 @@
 /* SEARCH ICONS */
 
 .search-icon {
-  height: 20px;
-  background-color: white;
+  cursor: pointer;
+  filter: invert(0.5);
 }

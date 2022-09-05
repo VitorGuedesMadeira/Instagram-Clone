@@ -16,7 +16,7 @@ const Chat = () => {
           <p>Seen 1h ago</p>
         </div>
       </div>
-      <div>
+      <div className="chat-icon">
         icon
       </div>
     </div>

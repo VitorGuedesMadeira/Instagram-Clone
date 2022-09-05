@@ -10,8 +10,10 @@ const Explore = () => {
   return (
     <div className="explore-section">
       <div className="explore-navigation-bar">
-        <img className="search-icon" src={searchIcon} alt="home" />
-        <input className="explore-search-bar" placeholder="Search" />
+        <div className="search-div">
+          <img className="search-icon" src={searchIcon} alt="home" />
+          <input className="explore-search-bar" placeholder="Search" />
+        </div>
       </div>
 
       <div className="explore-posts">
