@@ -1,9 +1,11 @@
 import React from 'react';
 import './Profile.css';
 import ProfilePost from './ProfilePost/ProfilePost';
+import plusIcon from '../../assets/icons/new-post.png';
+import hamburgerIcon from '../../assets/icons/hamburger.png';
 
 const Profile = () => {
-  const userName = 'userName';
+  const userName = 'Posts';
   return (
     <div className="profile-section">
       <div className="profile-navigation-bar">
@@ -11,8 +13,12 @@ const Profile = () => {
           {userName}
         </div>
         <div className="profile-navigation-links">
-          <a href="https://google.com/">+</a>
-          <a href="https://google.com/">☰</a>
+          <a href={userName}>
+            <img className="plus-icon" src={plusIcon} alt="plus-icon" />
+          </a>
+          <a href={userName}>
+            <img className="hamburger-icon" src={hamburgerIcon} alt="hamburger-icon" />
+          </a>
         </div>
       </div>
 
@@ -23,7 +29,7 @@ const Profile = () => {
         <div className="profile-posts-followers-following">
           <div className="profile-posts-counter">
             <p>74</p>
-            <p>Posts</p>
+            <p>{userName}</p>
           </div>
           <div className="profile-followers-counter">
             <p>419</p>
@@ -47,12 +53,13 @@ const Profile = () => {
 
       <div className="profile-userinterfaces">
         <div className="userinterfaces-title">Story Highlights</div>
-        <div className="userinterfaces-button">
-          <div>Icon1</div>
-          <div>Icon2</div>
-          <div>Icon3</div>
-          <div>Icon4</div>
-        </div>
+      </div>
+
+      <div className="userinterfaces-button">
+        <div>Icon1</div>
+        <div>Icon2</div>
+        <div>Icon3</div>
+        <div>Icon4</div>
       </div>
 
       <div className="profile-posts">

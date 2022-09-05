@@ -10,6 +10,7 @@
   align-items: center;
   height: 40px;
   padding: 0 10px;
+  z-index: 1;
 }
 
 .profile-navigation-links {
@@ -26,11 +27,11 @@
 /* PROFILE USER PICTURE AND INFO */
 
 .profile-user-picture-info {
-  display: flex;
-  position: fixed;
+  position: absolute;
   top: 40px;
-  height: 60px;
   width: 375px;
+  display: flex;
+  height: 60px;
   background-color: rgb(196, 54, 54);
   padding: 0 10px;
   align-items: center;
@@ -80,12 +81,13 @@
 
 .profile-username-biodescription {
   display: flex;
-  flex-direction: column;
-  background-color: blueviolet;
-  position: fixed;
+  position: absolute;
   width: 375px;
-  top: 100px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: blueviolet;
   padding: 0 10px;
+  top: 100px;
   height: 40px;
 }
 
@@ -94,7 +96,7 @@
 .profile-edit-profile-section {
   display: flex;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 140px;
   height: 40px;
   width: 375px;
@@ -106,7 +108,10 @@
   display: flex;
   width: 375px;
   justify-content: center;
-  background-color: blanchedalmond;
+  background-color: grey;
+  color: white;
+  padding: 3px 0;
+  border-radius: 5px;
 }
 
 /* PROFILE USER INTERFACES */
@@ -114,12 +119,12 @@
 .profile-userinterfaces {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   top: 180px;
   background-color: rgb(91, 61, 151);
   justify-content: center;
   width: 375px;
-  height: 60px;
+  height: 40px;
 }
 
 .userinterfaces-title {
@@ -127,11 +132,25 @@
 }
 
 .userinterfaces-button {
+  position: absolute;
+  top: 220px;
+  width: 375px;
+  height: 40px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   background-color: aqua;
-  width: 100%;
-  justify-content: space-evenly;
-  padding: 0 10px;
+  justify-content: space-between;
+  padding: 0 40px;
   cursor: pointer;
+}
+
+/* PROFILE ICONS */
+
+.plus-icon {
+  width: 20px;
+}
+
+.hamburger-icon {
+  width: 23px;
+  filter: invert(100);
 }

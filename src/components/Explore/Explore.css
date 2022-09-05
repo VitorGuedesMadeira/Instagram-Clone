@@ -13,6 +13,9 @@
 
 .explore-search-bar {
   width: 100%;
+  border: none;
+  height: 20px;
+  padding: 0 10px;
 }
 
 /* EXPLORE POSTS */
@@ -32,4 +35,11 @@
   background-size: cover;
   width: calc((100% / 3) - 1px);
   aspect-ratio: 1 / 1;
+}
+
+/* SEARCH ICONS */
+
+.search-icon {
+  height: 20px;
+  background-color: white;
 }

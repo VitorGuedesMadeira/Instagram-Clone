@@ -1,4 +1,5 @@
 import React from 'react';
+import searchIcon from '../../assets/icons/search.png';
 import './Explore.css';
 
 const Explore = () => {
@@ -6,7 +7,8 @@ const Explore = () => {
   return (
     <div className="explore-section">
       <div className="explore-navigation-bar">
-        <input className="explore-search-bar" placeholder="🔍 Search" />
+        <img className="search-icon" src={searchIcon} alt="home" />
+        <input className="explore-search-bar" placeholder="Search" />
       </div>
 
       <div className="explore-posts">

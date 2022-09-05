@@ -102,10 +102,15 @@
 }
 
 .redirect-button {
-  width: 16px;
+  width: 20px;
 }
 
 .favorite-button {
-  width: 16px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.more-button {
+  width: 20px;
   cursor: pointer;
 }

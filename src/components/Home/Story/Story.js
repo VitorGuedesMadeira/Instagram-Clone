@@ -9,7 +9,7 @@ const Story = () => {
       <div className="individual-story-image">
         {story}
       </div>
-      <p>your story</p>
+      <p>randomStory</p>
     </div>
   );
 };

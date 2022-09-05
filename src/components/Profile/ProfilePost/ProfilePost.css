@@ -2,9 +2,9 @@
 
 .profile-posts {
   display: flex;
-  padding-top: 240px;
   flex-wrap: wrap;
   gap: 1px;
+  padding-bottom: 40px;
 }
 
 .profile-posts-image {

@@ -4,6 +4,7 @@ import likeIcon from '../../../assets/icons/like.png';
 import commentsIcon from '../../../assets/icons/comment.png';
 import redirectIcon from '../../../assets/icons/direct.png';
 import favoriteIcon from '../../../assets/icons/favorite.png';
+import moreIcon from '../../../assets/icons/more.png';
 import './Post.css';
 
 const Post = () => {
@@ -16,7 +17,7 @@ const Post = () => {
           <div className="user-name">userName</div>
         </div>
         <div className="user-post-options">
-          ...
+          <img className="more-button" src={moreIcon} alt="more" />
         </div>
       </div>
 

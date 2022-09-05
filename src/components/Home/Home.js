@@ -5,6 +5,7 @@ import commentIcon from '../../assets/icons/comment-balloon-nav.png';
 import './Home.css';
 import Post from './Post/Post';
 import Story from './Story/Story';
+import UserStory from './UserStory/UserStory';
 
 const Home = () => {
   const stories = 'https://google.com/';
@@ -28,6 +29,21 @@ const Home = () => {
       </div>
 
       <div className="home-stories">
+        <UserStory />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
+        <Story />
         <Story />
         <Story />
         <Story />

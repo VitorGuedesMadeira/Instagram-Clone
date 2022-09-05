@@ -59,7 +59,7 @@
   cursor: pointer;
 }
 
-/* SHOPT USERINTERFACES */
+/* SHOP USERINTERFACES */
 
 .shop-userinterfaces {
   display: flex;
@@ -76,4 +76,11 @@
   background-size: cover;
   width: calc((100% / 2) - 1px);
   aspect-ratio: 1 / 1;
+}
+
+/* SHOP ICONS */
+
+.hamburger-icon {
+  width: 23px;
+  filter: invert(100);
 }

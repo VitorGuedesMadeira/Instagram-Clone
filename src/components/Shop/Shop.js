@@ -1,4 +1,5 @@
 import React from 'react';
+import hamburgerIcon from '../../assets/icons/hamburger.png';
 import './Shop.css';
 
 const Shop = () => {
@@ -11,7 +12,9 @@ const Shop = () => {
         </div>
         <div className="shop-navigation-links">
           <a href="https://google.com/">🗓️</a>
-          <a href="https://google.com/">☰</a>
+          <a href={userName}>
+            <img className="hamburger-icon" src={hamburgerIcon} alt="hamburger-icon" />
+          </a>
         </div>
       </div>
 

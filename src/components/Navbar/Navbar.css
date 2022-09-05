@@ -1,9 +1,10 @@
 .navigation-bar {
   position: fixed;
   bottom: 0;
-  background-color: black;
+  background-color: grey;
   width: 375px;
   padding: 0 10px;
+  border-top: 1px solid lightgray;
 }
 
 .navigation-ul {
@@ -11,6 +12,7 @@
   justify-content: space-evenly;
   align-items: center;
   height: 40px;
+  list-style-type: none;
 }
 
 .link {
