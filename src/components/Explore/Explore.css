@@ -9,6 +9,7 @@
   padding: 0 10px;
   position: fixed;
   width: 375px;
+  border-bottom: 1px solid lightgray;
 }
 
 .search-div {

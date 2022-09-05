@@ -59,6 +59,7 @@
 
 .home-posts {
   padding-top: 115px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 30px;
