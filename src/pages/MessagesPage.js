@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import Messages from '../components/Home/Home';
+import Messages from '../components/Messages/Messages';
 
 const MessagesPage = () => (
   <div>

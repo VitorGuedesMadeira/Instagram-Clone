@@ -1,5 +1,38 @@
 .messages-section {
   background-color: blue;
-  width: 100vh;
   height: 100vh;
+  width: 375px;
+}
+
+/* SHOP NAVIGATION BAR */
+
+.messages-navigation-bar {
+  position: fixed;
+  width: 375px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+.messages-navigation-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.messages-navigation-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* SHOP ICONS */
+
+.hamburger-icon {
+  width: 21px;
+  filter: invert(100);
 }
