@@ -1,0 +1,24 @@
+.chat-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.chat-individual {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-user {
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  border-radius: 50%;
+  border: 1px solid blue;
+}
+
+.chat-name-message {
+  display: flex;
+  flex-direction: column;
+}

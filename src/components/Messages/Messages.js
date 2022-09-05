@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import React, { useEffect } from 'react';
 import hamburgerIcon from '../../assets/icons/hamburger.png';
+import Chat from './Chat/Chat';
 import './Messages.css';
 
 const Messages = () => {
@@ -20,6 +21,31 @@ const Messages = () => {
             <img className="hamburger-icon" src={hamburgerIcon} alt="hamburger-icon" />
           </a>
         </div>
+      </div>
+
+      <div className="chat-interfaces">
+        <div>All</div>
+        <div>Calls</div>
+        <div>Requests</div>
+      </div>
+
+      <div className="chat-search-div">
+        <input className="chat-search-bar" placeholder="Search" />
+      </div>
+
+      <div className="individual-chats">
+        <Chat />
+        <Chat />
+        <Chat />
+        <Chat />
+        <Chat />
+        <Chat />
+        <Chat />
+        <Chat />
+        <Chat />
+        <Chat />
+        <Chat />
+        <Chat />
       </div>
     </div>
   );

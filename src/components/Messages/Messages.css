@@ -30,6 +30,61 @@
   color: white;
 }
 
+/* CHAT INTERFACES */
+
+.chat-interfaces {
+  position: absolute;
+  top: 40px;
+  height: 40px;
+  width: 375px;
+  display: flex;
+  gap: 1px;
+  justify-content: space-evenly;
+}
+
+.chat-interfaces div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: purple;
+  border-bottom: 2px solid grey;
+}
+
+/* CHAT SEARCH */
+
+.chat-search-div {
+  position: absolute;
+  top: 80px;
+  background-color: red;
+  height: 40px;
+  width: 375px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.chat-search-bar {
+  background-color: orange;
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* INDIVIDUAL CHATS */
+
+.individual-chats {
+  width: 375px;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 120px;
+  gap: 10px;
+}
+
 /* SHOP ICONS */
 
 .hamburger-icon {

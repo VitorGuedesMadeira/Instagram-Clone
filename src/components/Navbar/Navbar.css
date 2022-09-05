@@ -5,6 +5,7 @@
   width: 375px;
   padding: 0 10px;
   border-top: 1px solid lightgray;
+  z-index: 1;
 }
 
 .navigation-ul {
