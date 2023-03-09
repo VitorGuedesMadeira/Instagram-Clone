@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Profile.css';
+import './Profile.scss';
 import ProfilePost from './ProfilePost/ProfilePost';
 import plusIcon from '../../assets/icons/new-post.png';
 import hamburgerIcon from '../../assets/icons/hamburger.png';
@@ -10,62 +10,63 @@ const Profile = () => {
   });
 
   return (
-    <div className="profile-section">
-      <div className="profile-navigation-bar">
-        <div className="profile-username">
-          userName
-        </div>
-        <div className="profile-navigation-links">
+    <div id="profile-section-wrapper">
+      <div id="profile-section-wrapper__navigation">
+        <p>userName</p>
+        <div>
           <a href="https://google.com/">
-            <img className="plus-icon" src={plusIcon} alt="plus-icon" />
+            <img src={plusIcon} alt="plus-icon" />
           </a>
           <a href="https://google.com/">
-            <img className="hamburger-icon" src={hamburgerIcon} alt="hamburger-icon" />
+            <img src={hamburgerIcon} alt="hamburger-icon" />
           </a>
         </div>
       </div>
 
-      <div className="profile-user-picture-info">
-        <div className="profile-user-picture-div">
-          <div className="profile-user-picture" />
+      <div id="profile-section-wrapper__user-info">
+        <div id="profile-section-wrapper__picture-div">
+          <div />
         </div>
-        <div className="profile-posts-followers-following">
-          <div className="profile-posts-counter">
+
+        <div id="profile-section-wrapper__posts-followers-following">
+          <div id="profile-section-wrapper__posts-counter">
             <p>74</p>
             <p>Posts</p>
           </div>
-          <div className="profile-followers-counter">
+
+          <div id="profile-section-wrapper__followers-counter">
             <p>419</p>
             <p>followers</p>
           </div>
-          <div className="profile-following-counter">
+
+          <div id="profile-section-wrapper__following-counter">
             <p>692</p>
             <p>Following</p>
           </div>
         </div>
       </div>
 
-      <div className="profile-username-biodescription">
+      <div id="profile-section-wrapper__name-description">
         <div>userName</div>
         <div>bioDescription</div>
       </div>
 
-      <div className="profile-edit-profile-section">
-        <div className="edit-profile">Edit profile</div>
+      <div id="profile-section-wrapper__edit-profile">
+        <div>Edit profile</div>
       </div>
 
-      <div className="profile-userinterfaces">
-        <div className="userinterfaces-title">Story Highlights</div>
+      <div id="profile-section-wrapper__user-interfaces">
+        <div>Story Highlights</div>
       </div>
 
-      <div className="userinterfaces-button">
+      <div id="profile-section-wrapper__interfaces-buttons">
         <div>Icon1</div>
         <div>Icon2</div>
         <div>Icon3</div>
         <div>Icon4</div>
       </div>
 
-      <div className="profile-posts">
+      <div id="profile-section-wrapper__profile-posts">
         <ProfilePost />
         <ProfilePost />
         <ProfilePost />

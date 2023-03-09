@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import hamburgerIcon from '../../assets/icons/hamburger.png';
 import Chat from './Chat/Chat';
-import './Messages.css';
+import './Messages.scss';
 
 const Messages = () => {
   useEffect(() => {
@@ -10,12 +10,12 @@ const Messages = () => {
   });
 
   return (
-    <div className="messages-section">
-      <div className="messages-navigation-bar">
-        <div className="messages-title">
-          userName
-        </div>
-        <div className="messages-navigation-links">
+    <div id="messages-section-wrapper">
+
+      <div id="messages-section-wrapper__navigation">
+        <p>userName</p>
+
+        <div id="messages-section-wrapper__navigation-links">
           <a href="https://google.com/">🗓️</a>
           <a href="https://google.com/">
             <img className="hamburger-icon" src={hamburgerIcon} alt="hamburger-icon" />
@@ -23,17 +23,17 @@ const Messages = () => {
         </div>
       </div>
 
-      <div className="chat-interfaces">
+      <div id="messages-section-wrapper__interfaces">
         <div>All</div>
         <div>Calls</div>
         <div>Requests</div>
       </div>
 
-      <div className="chat-search-div">
-        <input className="chat-search-bar" placeholder="Search" />
+      <div id="messages-section-wrapper__search">
+        <input placeholder="Search" />
       </div>
 
-      <div className="individual-chats">
+      <div id="messages-section-wrapper__individual-chats">
         <Chat />
         <Chat />
         <Chat />

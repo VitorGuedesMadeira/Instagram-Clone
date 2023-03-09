@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import searchIcon from '../../assets/icons/search.png';
-import './Explore.css';
+import './Explore.scss';
 
 const Explore = () => {
   useEffect(() => {
@@ -8,36 +8,43 @@ const Explore = () => {
   });
 
   return (
-    <div className="explore-section">
-      <div className="explore-navigation-bar">
-        <div className="search-div">
-          <img className="search-icon" src={searchIcon} alt="home" />
-          <input className="explore-search-bar" placeholder="Search" />
+    <div id="explore-section-wrapper">
+      <div id="explore-navigation-bar">
+        <div>
+          <img src={searchIcon} alt="home" />
+          <input placeholder="Search" />
         </div>
       </div>
 
-      <div className="explore-posts">
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
-        <div className="explore-image">exploreImage</div>
+      <div id="explore-posts">
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+        <img src="https://picsum.photos/200" alt="explore" />
+
       </div>
     </div>
   );

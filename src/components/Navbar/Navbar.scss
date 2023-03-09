@@ -1,0 +1,27 @@
+/* 1 */
+#navigation-bar-wrapper {
+  position: fixed;
+  bottom: 0;
+  background-color: grey;
+  width: 375px;
+  padding: 0 10px;
+  border-top: 1px solid lightgray;
+  z-index: 1;
+
+  /* 2 */
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    list-style-type: none;
+
+    /* 3 */
+    .link {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+

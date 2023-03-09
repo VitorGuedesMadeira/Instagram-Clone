@@ -1,11 +1,11 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import './ProfilePost.css';
+import './ProfilePost.scss';
 
 const ProfilePost = () => {
   const profile = 'Picture';
   return (
-    <div className="profile-posts-image">
+    <div id="feed-post-image">
       {profile}
     </div>
   );

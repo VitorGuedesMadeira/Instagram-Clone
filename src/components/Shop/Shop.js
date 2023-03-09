@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import hamburgerIcon from '../../assets/icons/hamburger.png';
-import './Shop.css';
+import './Shop.scss';
 
 const Shop = () => {
   useEffect(() => {
@@ -8,46 +8,44 @@ const Shop = () => {
   });
 
   return (
-    <div className="shop-section">
-      <div className="shop-navigation-bar">
-        <div className="shop-title">
-          shop
-        </div>
-        <div className="shop-navigation-links">
+    <div id="shop-section-wrapper">
+      <div id="shop-section-wrapper__navigation">
+        <p>shop</p>
+        <div>
           <a href="https://google.com/">🗓️</a>
           <a href="https://google.com/">
-            <img className="hamburger-icon" src={hamburgerIcon} alt="hamburger-icon" />
+            <img src={hamburgerIcon} alt="hamburger-icon" />
           </a>
         </div>
       </div>
 
-      <div className="shop-options">
-        <input className="shop-search-bar" placeholder="🔍 Search shops" />
-        <div className="shop-userinterfaces-buttons">
-          <div className="shop-userinterface-button">Shops</div>
-          <div className="shop-userinterface-button">Videos</div>
-          <div className="shop-userinterface-button">Editor&apos;s picks</div>
-          <div className="shop-userinterface-button">Collection</div>
+      <div id="shop-section-wrapper__options">
+        <input placeholder="🔍 Search shops" />
+        <div>
+          <div>Shops</div>
+          <div>Videos</div>
+          <div>Editor&apos;s picks</div>
+          <div>Collection</div>
         </div>
       </div>
 
-      <div className="shop-userinterfaces">
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
-        <div className="shop-userinterface">shopImage</div>
+      <div id="shop-section-wrapper__interfaces">
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop"/>
       </div>
     </div>
   );

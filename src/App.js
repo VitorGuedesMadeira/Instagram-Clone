@@ -7,7 +7,7 @@ import ReelsPage from './pages/ReelsPage';
 import ShopPage from './pages/ShopPage';
 import ProfilePage from './pages/ProfilePage';
 import MessagesPage from './pages/MessagesPage';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

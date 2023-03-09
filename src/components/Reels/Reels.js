@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Reels.css';
+import './Reels.scss';
 
 const Reels = () => {
   useEffect(() => {
@@ -7,7 +7,7 @@ const Reels = () => {
   });
 
   return (
-    <div className="reels-section">
+    <div id="reels-section-wrapper">
       reels
     </div>
   );

@@ -5,51 +5,52 @@ import commentsIcon from '../../../assets/icons/comment.png';
 import redirectIcon from '../../../assets/icons/direct.png';
 import favoriteIcon from '../../../assets/icons/favorite.png';
 import moreIcon from '../../../assets/icons/more.png';
-import './Post.css';
+import './Post.scss';
 
 const Post = () => {
   const profile = 'postPicture';
   return (
-    <div className="user-post">
-      <div className="user-top-bar">
-        <div className="user-info">
-          <div className="user-picture" />
-          <div className="user-name">userName</div>
+    <div id="user-post-wrapper">
+      <div id="user-top-bar">
+        <div id="user-info">
+          <div id="user-picture" />
+          <div id="user-name">userName</div>
         </div>
-        <div className="user-post-options">
-          <img className="more-button" src={moreIcon} alt="more" />
+        <div id="user-post-options">
+          <img src={moreIcon} alt="more" />
         </div>
       </div>
 
-      <div className="user-post-picture">
+      <div id="user-post-picture">
         {profile}
       </div>
 
-      <div className="user-down-bar">
-        <div className="likes-comments-redirect">
+      <div id="user-down-bar">
+        <div id="likes-comments-redirect">
           <a href="https://google.com/">
-            <img className="likes-button" src={likeIcon} alt="like-icon" />
+            <img src={likeIcon} alt="like-icon" />
           </a>
           <a href="https://google.com/">
-            <img className="comments-button" src={commentsIcon} alt="comments-icon" />
+            <img src={commentsIcon} alt="comments-icon" />
           </a>
           <a href="https://google.com/">
-            <img className="redirect-button" src={redirectIcon} alt="redirect-icon" />
+            <img src={redirectIcon} alt="redirect-icon" />
           </a>
         </div>
-        <div className="favorite">
-          <img className="favorite-button" src={favoriteIcon} alt="favorite-icon" />
+
+        <div id="favorite">
+          <img src={favoriteIcon} alt="favorite-icon" />
         </div>
       </div>
 
-      <div className="user-likes">
-        <div className="likes-image">♥️</div>
-        <div className="likes-counter">532 Likes</div>
+      <div id="user-likes">
+        <div>♥️</div>
+        <div>532 Likes</div>
       </div>
 
-      <div className="user-name-subtitle">
-        <div className="user-down-name"><strong>userName</strong></div>
-        <div className="user-subtitle">Post subtitle 😄</div>
+      <div id="user-name-subtitle">
+        <div><strong>userName</strong></div>
+        <div>Post subtitle 😄</div>
       </div>
     </div>
   );
