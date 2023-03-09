@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import React, { useEffect } from 'react';
-import './Chat.css';
+import './Chat.scss';
 
 const Chat = () => {
   useEffect(() => {
@@ -8,15 +8,16 @@ const Chat = () => {
   });
 
   return (
-    <div className="chat-section">
-      <div className="chat-individual">
-        <div className="chat-user" />
-        <div className="chat-name-message">
+    <div id="chat-wrapper">
+      <div id="chat-wrapper__user">
+        <div id="chat-wrapper__user-image" />
+        <div id="chat-wrapper__user-info">
           <p>userName</p>
           <p>Seen 1h ago</p>
         </div>
       </div>
-      <div className="chat-icon">
+
+      <div id="chat-wrapper__icon">
         icon
       </div>
     </div>

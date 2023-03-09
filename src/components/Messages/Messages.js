@@ -18,7 +18,7 @@ const Messages = () => {
         <div id="messages-section-wrapper__navigation-links">
           <a href="https://google.com/">🗓️</a>
           <a href="https://google.com/">
-            <img className="hamburger-icon" src={hamburgerIcon} alt="hamburger-icon" />
+            <img src={hamburgerIcon} alt="hamburger-icon" />
           </a>
         </div>
       </div>
