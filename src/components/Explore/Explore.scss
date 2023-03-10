@@ -1,0 +1,57 @@
+/* 1 */
+#explore-section-wrapper {
+  /* 2 */
+  #explore-navigation-bar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    padding: 0 0.5rem;
+    position: fixed;
+    width: 375px;
+    border-bottom: 1px solid lightgray;
+
+    /* 3 */
+    div {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      width: 100%;
+      padding: 0 10px;
+      background-color: white;
+
+      /* 4 */
+      img {
+        cursor: pointer;
+        filter: invert(0.5);
+      }
+
+      /* 4 */
+      input {
+        width: 100%;
+        border: none;
+        padding: 5px 5px;
+        outline: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  /* 2 */
+  #explore-posts {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    gap: 1px;
+
+    /* 3 */
+    img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc((100% / 3) - 1px);
+      aspect-ratio: 1 / 1;
+    }
+  }
+}

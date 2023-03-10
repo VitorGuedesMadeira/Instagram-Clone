@@ -1,0 +1,38 @@
+/* 1 */
+#chat-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+
+  /* 2 */
+  #chat-wrapper__user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    /* 3 */
+    #chat-wrapper__user-image {
+      width: 50px;
+      height: 50px;
+      background-color: yellow;
+      border-radius: 50%;
+      border: 1px solid blue;
+    }
+
+    /* 3 */
+    #chat-wrapper__user-info {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* 2 */
+  #chat-wrapper__icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#chat-wrapper:hover {
+  background-color: rgb(0, 95, 0);
+}
