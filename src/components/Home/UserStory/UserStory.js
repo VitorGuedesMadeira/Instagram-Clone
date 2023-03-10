@@ -6,7 +6,7 @@ const UserStory = () => {
   const story = 'Story';
   return (
     <div id="user-story-wrapper">
-      <img alt="user story"/>
+      <img alt="user story" />
       <p>{story}</p>
     </div>
   );

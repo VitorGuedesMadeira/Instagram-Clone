@@ -30,22 +30,22 @@ const Shop = () => {
       </div>
 
       <div id="shop-section-wrapper__interfaces">
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
-        <img src="https://picsum.photos/200" alt="shop"/>
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
+        <img src="https://picsum.photos/200" alt="shop" />
       </div>
     </div>
   );

@@ -1,17 +1,19 @@
 /* 1 */
 #home-wrapper {
-  
+  padding-top: 3rem;
+
   /* 2 */
   #home-wrapper__navigation {
     position: fixed;
+    top: 0;
     width: 375px;
     background-color: black;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
-    padding: 0 10px;
+    height: 3rem;
+    padding: 0 0.5rem;
     z-index: 1;
     border-bottom: 1px solid lightgray;
 
@@ -47,9 +49,6 @@
 
   /* 2 */
   #home-wrapper__stories {
-    position: absolute;
-    top: 40px;
-    left: 0;
     width: 375px;
     display: flex;
     align-items: center;
@@ -63,7 +62,6 @@
 
   /* 2 */
   #home-wrapper__posts {
-    padding-top: 115px;
     padding-bottom: 40px;
     display: flex;
     flex-direction: column;

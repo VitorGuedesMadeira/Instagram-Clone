@@ -1,17 +1,19 @@
 /* 1 */
 #profile-section-wrapper {
-  
+  padding-top: 3rem;
+
   /* 2 */
   #profile-section-wrapper__navigation {
     position: fixed;
+    top: 0;
     width: 375px;
     background-color: black;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
-    padding: 0 10px;
+    height: 3rem;
+    padding: 0 0.5rem;
     z-index: 1;
     border-bottom: 1px solid lightgray;
 
@@ -32,8 +34,6 @@
 
   /* 2 */
   #profile-section-wrapper__user-info {
-    position: absolute;
-    top: 40px;
     width: 375px;
     display: flex;
     height: 60px;
@@ -91,13 +91,11 @@
   /* 2 */
   #profile-section-wrapper__name-description {
     display: flex;
-    position: absolute;
     width: 375px;
     flex-direction: column;
     justify-content: center;
     background-color: darkolivegreen;
     padding: 0 10px;
-    top: 100px;
     height: 40px;
   }
 
@@ -105,8 +103,6 @@
   #profile-section-wrapper__edit-profile {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 140px;
     height: 40px;
     width: 375px;
     background-color: darkorange;
@@ -128,8 +124,6 @@
   #profile-section-wrapper__user-interfaces {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 180px;
     background-color: rgb(91, 61, 151);
     justify-content: center;
     width: 375px;
@@ -143,8 +137,6 @@
 
   /* 2 */
   #profile-section-wrapper__interfaces-buttons {
-    position: absolute;
-    top: 220px;
     width: 375px;
     height: 40px;
     display: flex;

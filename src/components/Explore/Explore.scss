@@ -6,8 +6,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
-    padding: 0 10px;
+    height: 3rem;
+    padding: 0 0.5rem;
     position: fixed;
     width: 375px;
     border-bottom: 1px solid lightgray;
@@ -42,7 +42,7 @@
   #explore-posts {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 40px;
+    padding-top: 3rem;
     gap: 1px;
 
     /* 3 */

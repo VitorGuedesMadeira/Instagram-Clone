@@ -7,23 +7,22 @@ import favoriteIcon from '../../../assets/icons/favorite.png';
 import moreIcon from '../../../assets/icons/more.png';
 import './Post.scss';
 
-const Post = () => {
-  const profile = 'postPicture';
+const Post = (props) => {
+  const { post } = props;
+
   return (
     <div id="user-post-wrapper">
       <div id="user-top-bar">
         <div id="user-info">
-          <div id="user-picture" />
-          <div id="user-name">userName</div>
+          <img id="user-picture" src={post.post_user.image} alt="user picture" />
+          <div id="user-name">{post.post_user.name}</div>
         </div>
         <div id="user-post-options">
           <img src={moreIcon} alt="more" />
         </div>
       </div>
 
-      <div id="user-post-picture">
-        {profile}
-      </div>
+      <img id="user-post-picture" src={post.image_urls[0]} alt="post" />
 
       <div id="user-down-bar">
         <div id="likes-comments-redirect">
@@ -45,12 +44,12 @@ const Post = () => {
 
       <div id="user-likes">
         <div>♥️</div>
-        <div>532 Likes</div>
+        <div>{post.post_likes.length} Likes</div>
       </div>
 
       <div id="user-name-subtitle">
-        <div><strong>userName</strong></div>
-        <div>Post subtitle 😄</div>
+        <div><strong>{post.post_user.name}</strong></div>
+        <div>{post.title}</div>
       </div>
     </div>
   );

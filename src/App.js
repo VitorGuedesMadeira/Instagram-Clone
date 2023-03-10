@@ -7,13 +7,14 @@ import ReelsPage from './pages/ReelsPage';
 import ShopPage from './pages/ShopPage';
 import ProfilePage from './pages/ProfilePage';
 import MessagesPage from './pages/MessagesPage';
+import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
 import './App.scss';
 
 function App() {
   return (
     <>
-      <Navbar />
-      <main className="main-section">
+      <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/explore" element={<ExplorePage />} />
@@ -21,8 +22,12 @@ function App() {
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/messages" element={<MessagesPage />} />
+
+          <Route path="/sign-in" element={<SignInPage />} />
+          <Route path="/sign-up" element={<SignUpPage />} />
         </Routes>
       </main>
+      <Navbar />
     </>
   );
 }

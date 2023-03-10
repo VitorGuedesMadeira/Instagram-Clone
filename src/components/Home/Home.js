@@ -1,17 +1,23 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import plusIcon from '../../assets/icons/new-post.png';
 import likeIcon from '../../assets/icons/like.png';
 import commentIcon from '../../assets/icons/comment-balloon-nav.png';
-import './Home.scss';
 import Post from './Post/Post';
 import Story from './Story/Story';
 import UserStory from './UserStory/UserStory';
+import './Home.scss';
+import { getUsers } from '../../redux/thunks/usersThunk';
+import { getPosts } from '../../redux/thunks/postsThunk';
 
 const Home = () => {
+  const posts = useSelector((state) => state.posts.data);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    window.scrollTo(20, 0);
-  });
+    dispatch(getPosts());
+  }, []);
 
   return (
     <div id="home-wrapper">
@@ -58,13 +64,9 @@ const Home = () => {
       </div>
 
       <div id="home-wrapper__posts">
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {posts.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
       </div>
     </div>
   );
