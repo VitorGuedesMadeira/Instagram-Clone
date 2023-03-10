@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
+import PropTypes from 'prop-types';
 import likeIcon from '../../../assets/icons/like.png';
 import commentsIcon from '../../../assets/icons/comment.png';
 import redirectIcon from '../../../assets/icons/direct.png';
@@ -14,7 +15,7 @@ const Post = (props) => {
     <div id="user-post-wrapper">
       <div id="user-top-bar">
         <div id="user-info">
-          <img id="user-picture" src={post.post_user.image} alt="user picture" />
+          <img id="user-picture" src={post.post_user.image} alt="user" />
           <div id="user-name">{post.post_user.name}</div>
         </div>
         <div id="user-post-options">
@@ -44,15 +45,39 @@ const Post = (props) => {
 
       <div id="user-likes">
         <div>♥️</div>
-        <div>{post.post_likes.length} Likes</div>
+        <div>
+          {post.post_likes.length}
+          {' '}
+          Likes
+        </div>
       </div>
 
       <div id="user-name-subtitle">
-        <div><strong>{post.post_user.name}</strong></div>
+        <div>
+          <strong>{post.post_user.name}</strong>
+        </div>
         <div>{post.title}</div>
       </div>
     </div>
   );
+};
+
+// Post.PropTypes = {
+//   post: PropTypes.object,
+//   // ... define your prop validations
+// };
+
+Post.propTypes = {
+  post: PropTypes.shape({
+    id: PropTypes.number,
+    post_user: PropTypes.shape({
+      image: PropTypes.string,
+      name: PropTypes.string,
+    }),
+    image_urls: PropTypes.shape([PropTypes.string]),
+    post_likes: PropTypes.shape([]),
+    title: PropTypes.string,
+  }).isRequired,
 };
 
 export default Post;
