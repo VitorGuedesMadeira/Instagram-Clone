@@ -10,7 +10,8 @@ const headers = {
   },
 };
 
-export const getUsers = createAsyncThunk('getUsers', async () => {
+const getUsers = createAsyncThunk('getUsers', async () => {
   const response = await axios.get(url, headers);
   return response.data;
 });
+export default getUsers;

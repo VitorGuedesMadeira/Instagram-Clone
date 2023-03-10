@@ -25,8 +25,8 @@
 
       a {
         img {
-            width: 1.25rem;
-            filter: invert(100);
+          width: 1.25rem;
+          filter: invert(100);
         }
       }
     }
@@ -40,14 +40,14 @@
     background-color: rgb(196, 54, 54);
     padding: 0 10px;
     align-items: center;
-  
+
     /* 3 */
     #profile-section-wrapper__picture-div {
       flex: 1;
       display: flex;
       align-items: center;
       height: 100%;
-  
+
       /* 4 */
       div {
         background-color: white;
@@ -64,21 +64,21 @@
       display: flex;
       justify-content: space-evenly;
       flex: 2;
-      
+
       /* 4 */
       #profile-section-wrapper__posts-counter {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-      
+
       /* 4 */
       #profile-section-wrapper__followers-counter {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-      
+
       /* 4 */
       #profile-section-wrapper__following-counter {
         display: flex;
@@ -133,7 +133,7 @@
     div {
       padding: 0 10px;
     }
-  } 
+  }
 
   /* 2 */
   #profile-section-wrapper__interfaces-buttons {
@@ -155,5 +155,3 @@
     padding-bottom: 40px;
   }
 }
-
-

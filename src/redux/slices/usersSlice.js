@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
+/* */
 import { createSlice } from '@reduxjs/toolkit';
-import { getUsers } from '../thunks/usersThunk';
+import getUsers from '../thunks/usersThunk';
 
 // Handle actions in your reducers:
 const usersSlice = createSlice({

@@ -1,6 +1,5 @@
 /* 1 */
 #shop-section-wrapper {
-
   /* 2 */
   #shop-section-wrapper__navigation {
     position: fixed;
@@ -48,7 +47,7 @@
     padding: 0 10px;
     height: 80px;
     gap: 0.5rem;
-  
+
     /* 3 */
     input {
       height: 25px;
@@ -57,14 +56,14 @@
       padding: 10px;
       border-radius: 5px;
     }
-  
+
     /* 3 */
     div {
       display: flex;
       height: 40px;
       justify-content: space-between;
       align-items: center;
-  
+
       /* 4 */
       div {
         background-color: orange;

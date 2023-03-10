@@ -17,7 +17,7 @@
     padding: 0 10px;
     z-index: 1;
 
-    /* 3*/
+    /* 3 */
     #messages-section-wrapper__navigation-links {
       display: flex;
       align-items: center;
@@ -29,6 +29,7 @@
       }
     }
   }
+
   /* 2 */
   #messages-section-wrapper__interfaces {
     position: absolute;
@@ -38,7 +39,7 @@
     display: flex;
     gap: 1px;
     justify-content: space-evenly;
-  
+
     /* 3 */
     div {
       width: 100%;
@@ -61,7 +62,7 @@
     padding: 0 10px;
     display: flex;
     align-items: center;
-  
+
     /* 3 */
     input {
       background-color: orange;
@@ -84,4 +85,3 @@
     padding-bottom: 45px;
   }
 }
-

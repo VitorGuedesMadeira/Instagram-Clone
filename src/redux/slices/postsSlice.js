@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import { createSlice } from '@reduxjs/toolkit';
-import { getPosts } from '../thunks/postsThunk';
+import getPosts from '../thunks/postsThunk';
 
 // Handle actions in your reducers:
 const postsSlice = createSlice({
