@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import plusIcon from '../../assets/icons/new-post.png';
 import likeIcon from '../../assets/icons/like.png';
 import commentIcon from '../../assets/icons/comment-balloon-nav.png';
 import Post from './Post/Post';
@@ -27,11 +26,7 @@ const Home = () => {
             alt="instagram-logo"
           />
         </div>
-
         <div id="home-wrapper__navigation-links">
-          <a href="https://google.com/">
-            <img src={plusIcon} alt="plus-icon" />
-          </a>
           <a href="https://google.com/">
             <img src={likeIcon} alt="like-icon" />
           </a>

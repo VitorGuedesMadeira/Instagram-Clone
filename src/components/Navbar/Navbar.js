@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import homeIcon from '../../assets/icons/home.png';
 import searchIcon from '../../assets/icons/search.png';
 import reelsIcon from '../../assets/icons/reels.png';
-import shopIcon from '../../assets/icons/shop.png';
+import plusIcon from '../../assets/icons/new-post.png';
 import userIcon from '../../assets/icons/user.png';
 import './Navbar.scss';
 
@@ -21,13 +21,13 @@ const Navbar = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/reels" className="link">
-          <img src={reelsIcon} alt="reels" />
+        <NavLink to="/new-post" className="link">
+          <img src={plusIcon} alt="plus-icon" />
         </NavLink>
       </li>
       <li>
-        <NavLink to="/shop" className="link">
-          <img src={shopIcon} alt="shop" />
+        <NavLink to="/reels" className="link">
+          <img src={reelsIcon} alt="reels" />
         </NavLink>
       </li>
       <li>
