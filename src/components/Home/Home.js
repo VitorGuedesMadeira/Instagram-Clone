@@ -7,8 +7,8 @@ import commentIcon from '../../assets/icons/comment-balloon-nav.png';
 import Post from './Post/Post';
 import Story from './Story/Story';
 import UserStory from './UserStory/UserStory';
-import './Home.scss';
 import getPosts from '../../redux/thunks/postsThunk';
+import './Home.scss';
 
 const Home = () => {
   const posts = useSelector((state) => state.posts.data);
@@ -62,14 +62,23 @@ const Home = () => {
         <Story />
         <Story />
         <Story />
-        <Story />
       </div>
 
-      <div id="home-wrapper__posts">
-        {posts.map((post) => (
-          <Post key={post.id} post={post} />
-        ))}
-      </div>
+      {posts.loading
+        ? (
+          <>
+            <div id="home-wrapper__posts">
+              {posts.map((post) => (
+                <Post key={post.id} post={post} />
+              ))}
+            </div>
+          </>
+        )
+        : (
+          <div id="home-wrapper__loading-posts">
+            loading
+          </div>
+        )}
     </div>
   );
 };

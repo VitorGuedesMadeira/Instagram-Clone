@@ -8,15 +8,24 @@
   width: 100%;
 
   /* 2 */
-  img {
-    background-color: white;
-    border: 1px solid red;
-    width: 45px;
-    border-radius: 50%;
-    aspect-ratio: 1 / 1;
+  #image-wrapper {
+    padding: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #f58529, #feda77, #dd2a7b, #8134af, #515bd4);
+
+    img {
+      background-color: rgb(137, 137, 137);
+      border: 2px solid white;
+      width: 45px;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
   }
 }

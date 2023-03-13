@@ -1,12 +1,16 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
+import plusIcon from '../../../assets/icons/new-post.png';
 import './UserStory.scss';
 
 const UserStory = () => {
-  const story = 'Story';
+  const story = 'Your story';
   return (
     <div id="user-story-wrapper">
-      <img alt="user story" />
+      <div>
+        <img id="user-story" alt="user story" />
+        <img id="plus" src={plusIcon} alt="plus-icon" />
+      </div>
       <p>{story}</p>
     </div>
   );
