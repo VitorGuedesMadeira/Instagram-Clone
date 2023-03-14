@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import directIcon from '../../../../assets/icons/direct.png';
 import backIcon from '../../../../assets/icons/back.png';
 import newComment from '../../../../redux/thunks/newCommentThunk';
@@ -14,8 +15,6 @@ const Comments = () => {
   const loading = useSelector((state) => state.post.loading);
   const location = useLocation();
   const postID = location.state.id;
-  const currentDate = new Date();
-  const minutes = currentDate.getMinutes();
   const dispatch = useDispatch();
 
   const [selectedText, setSelectedText] = useState('');
@@ -70,7 +69,7 @@ const Comments = () => {
                   <div>
                     {post.post_user && (
                     <p>{post.post_user.name}</p>)}
-                    <small>{minutes}</small>
+                    <small>{moment(post.created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')}</small>
                   </div>
                   <p>{post && post.title}</p>
                 </div>
@@ -84,7 +83,7 @@ const Comments = () => {
                       <div className="comments-wrapper__information">
                         <div className="comments-wrapper__gap">
                           <p>{comment.user.name}</p>
-                          <small>22m</small>
+                          <small>{moment(comment.created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')}</small>
                         </div>
                         <p>{comment.text}</p>
                         <div className="comments-wrapper__flex">
