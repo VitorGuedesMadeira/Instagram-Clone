@@ -27,9 +27,9 @@
   /* 2 */
   #comments-wrapper__post-title {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.75rem;
-    padding: 0 0.5rem;
+    padding: 0.5rem;
     min-height: 4rem;
     background-color: white;
     border-bottom: 1px solid lightgray;
@@ -91,16 +91,18 @@
           align-items: center;
           gap: 0.5rem;
 
-          /* 6 */
-          .comments-wrapper__flex {
-            display: flex;
-            gap: 1rem;
+        }
+        /* 5 */
+        .comments-wrapper__flex {
+          display: flex;
+          gap: 1rem;
 
-            /* 7 */
-            small {
-              font-size: 0.75em;
-              color: grey;
-            }
+          /* 6 */
+          button {
+            background-color: transparent;
+            border: none;
+            font-size: 0.75em;
+            cursor: pointer;
           }
         }
       }
@@ -170,6 +172,13 @@
         align-items: flex-start;
         gap: 0.75rem;
         overflow: hidden;
+
+        button {
+          background-color: transparent;
+          border: none;
+          font-size: 0.75em;
+          cursor: pointer;
+        }
 
         img {
           background-color: grey;

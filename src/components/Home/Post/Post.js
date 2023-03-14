@@ -31,9 +31,9 @@ const Post = (props) => {
           <a href="https://google.com/">
             <img src={likeIcon} alt="like-icon" />
           </a>
-          <a href="https://google.com/">
+          <NavLink state={post} to="/comments">
             <img src={commentsIcon} alt="comments-icon" />
-          </a>
+          </NavLink>
           <a href="https://google.com/">
             <img src={redirectIcon} alt="redirect-icon" />
           </a>
@@ -45,11 +45,7 @@ const Post = (props) => {
       </div>
 
       <div id="user-likes">
-        <div>
-          {post.post_likes.length}
-          {' '}
-          Likes
-        </div>
+        {post.post_likes.length > 0 ? <div>{`${post.post_likes.length} Likes`}</div> : null}
       </div>
 
       <div id="user-name-subtitle">

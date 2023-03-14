@@ -7,6 +7,7 @@ import moment from 'moment';
 import directIcon from '../../../../assets/icons/direct.png';
 import backIcon from '../../../../assets/icons/back.png';
 import newComment from '../../../../redux/thunks/newCommentThunk';
+import newReply from '../../../../redux/thunks/newReplyThunk';
 import getPost from '../../../../redux/thunks/postThunk';
 import './Comments.scss';
 
@@ -18,6 +19,8 @@ const Comments = () => {
   const dispatch = useDispatch();
 
   const [selectedText, setSelectedText] = useState('');
+  const [selectedComment, setSelectedComment] = useState('');
+  const [selectedType, setSelectedType] = useState('comment');
 
   useEffect(() => {
     window.scrollTo(20, 0);
@@ -26,18 +29,40 @@ const Comments = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const body = {
-      text: selectedText,
-      post_id: post.id,
-      user_id: 1,
-    };
-    dispatch(newComment(body));
-    window.location.reload();
+
+    if (selectedType === 'comment') {
+      const body = {
+        text: selectedText,
+        post_id: post.id,
+        user_id: 1,
+      };
+      dispatch(newComment(body));
+      window.location.reload();
+    }
+
+    if (selectedType === 'reply') {
+      const body = {
+        text: selectedText,
+        comment_id: selectedComment,
+        user_id: 1,
+      };
+      dispatch(newReply(body));
+      window.location.reload();
+    }
   };
 
   const selectEmoji = (e) => {
     const text = document.querySelector('#form-input');
     text.value += e.target.innerHTML;
+    setSelectedText(text.value);
+    text.focus();
+  };
+
+  const selectReply = (e, username) => {
+    const text = document.querySelector('#form-input');
+    text.value = `@${username} `;
+    setSelectedText(text.value);
+    text.focus();
   };
 
   const toggleVisibility = (e) => {
@@ -89,16 +114,26 @@ const Comments = () => {
                         <div className="comments-wrapper__flex">
                           {comment.comment_likes.length > 0
                             ? (
-                              <small>
+                              <button type="button">
                                 {comment.comment_likes.length}
                                 {' '}
                                 likes
-                              </small>
+                              </button>
                             )
                             : null}
-                          <small>Reply</small>
-                          <small>See translation</small>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              setSelectedType('reply');
+                              selectReply(e, comment.user.name);
+                              setSelectedComment(comment.id);
+                            }}
+                          >
+                            Reply
+                          </button>
+                          <button type="button">See translation</button>
                         </div>
+
                         {comment.comment_replies.length > 0
                           ? (
                             <button type="button" className="comments-wrapper__show-replies" onClick={toggleVisibility}>
@@ -127,20 +162,30 @@ const Comments = () => {
                           <div className="comments-wrapper__reply-information">
                             <div className="comments-wrapper__reply-gap">
                               <p>{reply.user.name}</p>
-                              <small>22m</small>
+                              <small>{moment(reply.created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')}</small>
                             </div>
                             <p>{reply.text}</p>
                             <div className="comments-wrapper__reply-flex">
                               {comment.comment_likes.length > 0
                                 ? (
-                                  <small>
+                                  <button type="button">
                                     {comment.comment_likes.length}
                                     {' '}
                                     likes
-                                  </small>
+                                  </button>
                                 )
                                 : null}
-                              <small>Reply</small>
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  setSelectedType('reply');
+                                  selectReply(e, reply.user.name);
+                                  setSelectedComment(comment.id);
+                                }}
+                              >
+                                Reply
+                              </button>
+                              <button type="button">See translation</button>
                             </div>
                           </div>
                         </div>
