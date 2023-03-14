@@ -1,8 +1,7 @@
 /* eslint-disable linebreak-style */
 import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 import directIcon from '../../../../assets/icons/direct.png';
 import backIcon from '../../../../assets/icons/back.png';
 import newComment from '../../../../redux/thunks/newCommentThunk';
@@ -10,10 +9,12 @@ import getPost from '../../../../redux/thunks/postThunk';
 import './Comments.scss';
 
 const Comments = () => {
-  const [commentText, setCommentText] = useState('');
+  const singlePost = useSelector((state) => state.post.data);
   const location = useLocation();
   const post = location.state;
   const dispatch = useDispatch();
+
+  const [selectedText, setSelectedText] = useState('');
 
   useEffect(() => {
     window.scrollTo(20, 0);
@@ -23,8 +24,8 @@ const Comments = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const body = {
-      text: commentText,
-      post_id: post,
+      text: selectedText,
+      post_id: post.id,
       user_id: 1,
     };
     dispatch(newComment(body));
@@ -37,9 +38,11 @@ const Comments = () => {
   };
 
   const toggleVisibility = (e) => {
-    e.target.classList.add('hide');
-    e.target.parentElement.parentElement.parentElement.nextElementSibling.classList.add('show');
+    e.target.parentElement.classList.toggle('hide');
+    e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling.classList.toggle('show');
   };
+
+  console.log(singlePost);
 
   return (
     <div id="comments-wrapper">
@@ -66,7 +69,7 @@ const Comments = () => {
         </div>
 
         {post.post_comments.map((comment) => (
-          <>
+          <div key={comment.id}>
             <div className="comments-wrapper__comment">
               <div className="comments-wrapper__flex">
                 <img src={comment.user.image} alt="user" />
@@ -92,10 +95,10 @@ const Comments = () => {
                   {comment.comment_replies.length > 0
                     ? (
                       <button type="button" className="comments-wrapper__show-replies" onClick={toggleVisibility}>
-                        - view
-                        {comment.comment_replies.length}
-                        {' '}
-                        more replies
+                        <span className="first-span" />
+                        <span>View</span>
+                        <span>{comment.comment_replies.length}</span>
+                        <span>more replies</span>
                       </button>
                     )
                     : null}
@@ -143,7 +146,7 @@ const Comments = () => {
                 </div>
               ))}
             </div>
-          </>
+          </div>
         ))}
       </div>
 
@@ -161,26 +164,13 @@ const Comments = () => {
         <div id="comments-wrapper__form">
           <img src="" alt="user" />
           <form onSubmit={handleSubmit}>
-            <input id="form-input" type="text" value={commentText} onChange={(e) => setCommentText(e.target.value)} placeholder="Add a comment..." />
+            <input id="form-input" type="text" value={selectedText} onChange={(e) => setSelectedText(e.target.value)} placeholder="Add a comment..." />
             <button type="submit">post</button>
           </form>
         </div>
       </div>
     </div>
   );
-};
-
-Comments.propTypes = {
-  post: PropTypes.shape({
-    id: PropTypes.number,
-    post_user: PropTypes.shape({
-      image: PropTypes.string,
-      name: PropTypes.string,
-    }),
-    image_urls: PropTypes.shape([PropTypes.string]),
-    post_likes: PropTypes.shape([]),
-    title: PropTypes.string,
-  }).isRequired,
 };
 
 export default Comments;

@@ -123,8 +123,22 @@
 
   /* 2 */
   .comments-wrapper__show-replies {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
     color: grey;
     cursor: pointer;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+
+    .first-span {
+      width: 1.5rem;
+      height: 1px;
+      background-color: grey;
+    }
   }
 
   /* 2 */
@@ -195,7 +209,9 @@
       justify-content: space-between;
 
       /* 4 */
-      p {
+      button {
+        background-color: transparent;
+        border: none;
         font-size: 1.25em;
         cursor: pointer;
       }

@@ -64,21 +64,11 @@ const Home = () => {
         <Story />
       </div>
 
-      {posts.loading
-        ? (
-          <>
-            <div id="home-wrapper__posts">
-              {posts.map((post) => (
-                <Post key={post.id} post={post} />
-              ))}
-            </div>
-          </>
-        )
-        : (
-          <div id="home-wrapper__loading-posts">
-            loading
-          </div>
-        )}
+      <div id="home-wrapper__posts">
+        {posts.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
+      </div>
     </div>
   );
 };
