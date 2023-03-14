@@ -7,7 +7,7 @@ const postSlice = createSlice({
   name: 'post',
   initialState: {
     data: [],
-    loading: false,
+    loading: null,
     error: null,
   },
   reducers: {
@@ -19,8 +19,8 @@ const postSlice = createSlice({
       state.loading = true;
     });
     builder.addCase(getPost.fulfilled, (state, action) => {
-      state.loading = false;
       state.data = action.payload;
+      state.loading = false;
     });
     builder.addCase(getPost.rejected, (state, action) => {
       state.loading = false;
