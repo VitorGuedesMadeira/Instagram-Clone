@@ -7,8 +7,8 @@ import commentIcon from '../../assets/icons/comment-balloon-nav.png';
 import Post from './Post/Post';
 import Story from './Story/Story';
 import UserStory from './UserStory/UserStory';
-import './Home.scss';
 import getPosts from '../../redux/thunks/postsThunk';
+import './Home.scss';
 
 const Home = () => {
   const posts = useSelector((state) => state.posts.data);
@@ -43,7 +43,6 @@ const Home = () => {
 
       <div id="home-wrapper__stories">
         <UserStory />
-        <Story />
         <Story />
         <Story />
         <Story />

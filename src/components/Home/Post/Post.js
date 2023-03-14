@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import likeIcon from '../../../assets/icons/like.png';
 import commentsIcon from '../../../assets/icons/comment.png';
 import redirectIcon from '../../../assets/icons/direct.png';
@@ -15,7 +16,7 @@ const Post = (props) => {
     <div id="user-post-wrapper">
       <div id="user-top-bar">
         <div id="user-info">
-          <img id="user-picture" src={post.post_user.image} alt="user" />
+          <div id="image-wrapper"><img src={post.post_user.image} alt="user" /></div>
           <div id="user-name">{post.post_user.name}</div>
         </div>
         <div id="user-post-options">
@@ -30,9 +31,9 @@ const Post = (props) => {
           <a href="https://google.com/">
             <img src={likeIcon} alt="like-icon" />
           </a>
-          <a href="https://google.com/">
+          <NavLink state={post} to="/comments">
             <img src={commentsIcon} alt="comments-icon" />
-          </a>
+          </NavLink>
           <a href="https://google.com/">
             <img src={redirectIcon} alt="redirect-icon" />
           </a>
@@ -44,12 +45,7 @@ const Post = (props) => {
       </div>
 
       <div id="user-likes">
-        <div>♥️</div>
-        <div>
-          {post.post_likes.length}
-          {' '}
-          Likes
-        </div>
+        {post.post_likes.length > 0 ? <div>{`${post.post_likes.length} Likes`}</div> : null}
       </div>
 
       <div id="user-name-subtitle">
@@ -58,14 +54,19 @@ const Post = (props) => {
         </div>
         <div>{post.title}</div>
       </div>
+
+      <div id="view-all-comments">
+        <NavLink state={post} to="/comments">
+          View all
+          {' '}
+          {post.post_comments.length}
+          {' '}
+          comments
+        </NavLink>
+      </div>
     </div>
   );
 };
-
-// Post.PropTypes = {
-//   post: PropTypes.object,
-//   // ... define your prop validations
-// };
 
 Post.propTypes = {
   post: PropTypes.shape({
@@ -76,6 +77,7 @@ Post.propTypes = {
     }),
     image_urls: PropTypes.shape([PropTypes.string]),
     post_likes: PropTypes.shape([]),
+    post_comments: PropTypes.shape([]),
     title: PropTypes.string,
   }).isRequired,
 };
