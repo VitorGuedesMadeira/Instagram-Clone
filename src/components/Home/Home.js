@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,17 +22,24 @@ const Home = () => {
     dispatch(getPosts());
   }, []);
 
-  const removeDuplicateStories = (stories_to_filter) => {
-    const uniqueStories = [];
+  const groupDuplicateStories = (storiesToGroup) => {
+    const groupedStories = [];
     const ids = [];
 
-    stories_to_filter.forEach((story) => {
-      if (!ids.includes(story.story_user.id)) {
-        ids.push(story.story_user.id);
-        uniqueStories.push(story);
+    storiesToGroup.forEach((story) => {
+      const { id } = story.story_user;
+      const index = ids.indexOf(id);
+      if (index === -1) {
+        // If the ID is not already in the array, add it and add a new subarray for this ID
+        ids.push(id);
+        groupedStories.push([story]);
+      } else {
+        // If the ID is already in the array, add the story to the existing subarray for this ID
+        groupedStories[index].push(story);
       }
     });
-    return uniqueStories;
+
+    return groupedStories;
   };
 
   return (
@@ -59,8 +67,8 @@ const Home = () => {
 
       <div id="home-wrapper__stories">
         <UserStory />
-        {removeDuplicateStories(stories).map((story) => (
-          <Story key={story.id} story={story} />
+        {groupDuplicateStories(stories).map((story, index) => (
+          <Story key={story[0].id} story={story} index={index} stories={groupDuplicateStories(stories)} />
         ))}
       </div>
 

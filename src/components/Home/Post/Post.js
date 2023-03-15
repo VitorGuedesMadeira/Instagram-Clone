@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import moment from 'moment';
 import likeIcon from '../../../assets/icons/like.png';
 import commentsIcon from '../../../assets/icons/comment.png';
 import redirectIcon from '../../../assets/icons/direct.png';
@@ -16,7 +17,9 @@ const Post = (props) => {
     <div id="user-post-wrapper">
       <div id="user-top-bar">
         <div id="user-info">
-          <div id="image-wrapper"><img src={post.post_user.image} alt="user" /></div>
+          <div id="image-wrapper">
+            <img src={post.post_user.image} alt="user" />
+          </div>
           <div id="user-name">{post.post_user.name}</div>
         </div>
         <div id="user-post-options">
@@ -64,6 +67,15 @@ const Post = (props) => {
           comments
         </NavLink>
       </div>
+
+      <div id="home-add-comment">
+        <img src={post.post_user.image} alt="user" />
+        <input type="text" placeholder="Add comment..." />
+      </div>
+
+      <div className="time-difference">
+        {moment(post.created_at).fromNow(true).replace('hours', 'h')}
+      </div>
     </div>
   );
 };
@@ -71,6 +83,7 @@ const Post = (props) => {
 Post.propTypes = {
   post: PropTypes.shape({
     id: PropTypes.number,
+    created_at: PropTypes.string,
     post_user: PropTypes.shape({
       image: PropTypes.string,
       name: PropTypes.string,
