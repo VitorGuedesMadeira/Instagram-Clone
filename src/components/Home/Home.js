@@ -50,7 +50,6 @@ const Home = () => {
             alt="instagram-logo"
           />
         </div>
-
         <div id="home-wrapper__navigation-links">
           <a href="https://google.com/">
             <img src={likeIcon} alt="like-icon" />

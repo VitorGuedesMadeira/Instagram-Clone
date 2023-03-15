@@ -21,7 +21,7 @@ const Navbar = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/" className="link">
+        <NavLink to="/new-post" className="link">
           <img src={plusIcon} alt="plus-icon" />
         </NavLink>
       </li>
