@@ -30,9 +30,11 @@ const NewPost = () => {
     setFileLabel(`Uploaded ${files.length} file${files.length > 1 ? 's' : ''}`);
   };
 
+  const handleRedirection = () => navigate('/');
+
   return (
     <div className="modal">
-      <button type="submit" className="close">
+      <button type="submit" className="close" onClick={handleRedirection}>
         &times;
       </button>
       <div className="modal-content">
