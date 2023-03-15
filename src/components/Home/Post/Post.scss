@@ -2,7 +2,8 @@
 #user-post-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: brown;
+  background-color: white;
+  padding: 0.5rem 0;
 
   /* 2 */
   #user-top-bar {
@@ -10,8 +11,8 @@
     align-items: center;
     justify-content: space-between;
     height: 40px;
-    background-color: blueviolet;
-    padding: 0 10px;
+    background-color: white;
+    padding: 0 0.5rem;
 
     /* 3 */
     #user-info {
@@ -20,12 +21,21 @@
       gap: 5px;
 
       /* 4 */
-      #user-picture {
-        height: 25px;
-        width: 25px;
-        background-color: blue;
-        border: 2px solid red;
+      #image-wrapper {
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 50%;
+        background-image: linear-gradient(45deg, #f58529, #feda77, #dd2a7b, #8134af, #515bd4);
+
+        img {
+          height: 27.5px;
+          width: 27.5px;
+          background-color: blue;
+          border-radius: 50%;
+          border: 2px solid white;
+        }
       }
     }
 
@@ -39,7 +49,7 @@
 
       /* 4 */
       img {
-        width: 20px;
+        width: 24px;
         cursor: pointer;
       }
     }
@@ -59,9 +69,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 0.5rem;
     height: 40px;
-    background-color: yellow;
+    background-color: white;
 
     /* 3 */
     #likes-comments-redirect {
@@ -72,7 +82,7 @@
       /* 4 */
       a {
         img {
-          width: 20px;
+          width: 24px;
         }
       }
     }
@@ -80,7 +90,7 @@
     /* 3 */
     #favorite {
       img {
-        width: 20px;
+        width: 24px;
         cursor: pointer;
       }
     }
@@ -91,9 +101,9 @@
     display: flex;
     align-items: center;
     height: 20px;
-    padding: 0 10px;
+    padding: 0 0.5rem;
     gap: 5px;
-    background-color: darkolivegreen;
+    background-color: white;
   }
 
   /* 2 */
@@ -102,8 +112,46 @@
     flex-wrap: wrap;
     align-items: center;
     height: 100%;
-    background-color: red;
+    background-color: white;
     gap: 10px;
-    padding: 0 10px;
+    padding: 0 0.5rem;
+  }
+
+  /* 2 */
+  #view-all-comments {
+    background-color: white;
+    padding: 0 0.5rem;
+
+    /* 3 */
+    a {
+      color: gray;
+      text-decoration: none;
+    }
+  }
+
+  /* 2 */
+  #home-add-comment {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+
+    img {
+      height: 16px;
+      width: 16px;
+      background-color: gray;
+      border-radius: 50%;
+    }
+
+    input {
+      border-radius: 25px;
+      border: none;
+      outline: none;
+    }
+  }
+
+  /* 2 */
+  .time-difference {
+    background-color: white;
+    padding: 0 0.5rem;
   }
 }

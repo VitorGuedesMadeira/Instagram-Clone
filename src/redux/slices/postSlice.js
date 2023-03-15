@@ -1,14 +1,13 @@
 /* eslint-disable linebreak-style */
-/* */
 import { createSlice } from '@reduxjs/toolkit';
-import getUsers from '../thunks/usersThunk';
+import getPost from '../thunks/postThunk';
 
 // Handle actions in your reducers:
-const usersSlice = createSlice({
-  name: 'users',
+const postSlice = createSlice({
+  name: 'post',
   initialState: {
     data: [],
-    loading: false,
+    loading: null,
     error: null,
   },
   reducers: {
@@ -16,14 +15,14 @@ const usersSlice = createSlice({
   },
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
-    builder.addCase(getUsers.pending, (state) => {
+    builder.addCase(getPost.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(getUsers.fulfilled, (state, action) => {
-      state.loading = false;
+    builder.addCase(getPost.fulfilled, (state, action) => {
       state.data = action.payload;
+      state.loading = false;
     });
-    builder.addCase(getUsers.rejected, (state, action) => {
+    builder.addCase(getPost.rejected, (state, action) => {
       state.loading = false;
       state.error = action.error;
     });
@@ -31,6 +30,6 @@ const usersSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { usersReducer } = usersSlice.actions;
+export const { postReducer } = postSlice.actions;
 
-export default usersSlice.reducer;
+export default postSlice.reducer;

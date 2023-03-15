@@ -2,20 +2,35 @@
 #user-story-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   font-size: 0.6em;
   width: 100%;
+  position: relative;
 
-  /* 2 */
-  img {
-    background-color: white;
-    border: 1px solid rgb(0, 76, 255);
-    width: 45px;
-    border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  div {
+    position: relative;
+
+    /* 2 */
+    #user-story {
+      background-color: cadetblue;
+      width: 45px;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    /* 2 */
+    #plus {
+      background-color: rgb(96, 131, 246);
+      width: 25px;
+      border-radius: 50%;
+      border: 3px solid white;
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+    }
   }
 }

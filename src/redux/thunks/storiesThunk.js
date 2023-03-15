@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'http://127.0.0.1:3001/users/';
+const url = 'http://127.0.0.1:3001/stories/';
 
 const headers = {
   headers: {
@@ -10,8 +10,8 @@ const headers = {
   },
 };
 
-const getUsers = createAsyncThunk('getUsers', async () => {
+const getStories = createAsyncThunk('getStories', async () => {
   const response = await axios.get(url, headers);
   return response.data;
 });
-export default getUsers;
+export default getStories;
