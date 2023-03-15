@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 import directIcon from '../../../../assets/icons/direct.png';
 import backIcon from '../../../../assets/icons/back.png';
 import newComment from '../../../../redux/thunks/newCommentThunk';

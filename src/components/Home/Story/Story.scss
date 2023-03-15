@@ -8,7 +8,7 @@
   width: 100%;
 
   /* 2 */
-  #image-wrapper {
+  .image-wrapper {
     padding: 2px;
     display: flex;
     justify-content: center;
@@ -16,6 +16,7 @@
     border-radius: 50%;
     background-image: linear-gradient(45deg, #f58529, #feda77, #dd2a7b, #8134af, #515bd4);
 
+    /* 3 */
     img {
       background-color: rgb(137, 137, 137);
       border: 2px solid white;
@@ -26,6 +27,11 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
+    }
+
+    /* 3 */
+    &.image-wrapper.show {
+      background-image: linear-gradient(45deg, lightgray, lightgray);
     }
   }
 }
