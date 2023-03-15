@@ -1,15 +1,18 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Story.scss';
 
-const Story = () => {
-  const story = 'Story';
+const Story = (props) => {
+  const { story } = props;
+  console.log(story);
+
   return (
     <div id="users-story-wrapper">
-      <div id="image-wrapper">
-        <img alt="user story" />
-      </div>
-      <p>{story}</p>
+      <NavLink className="image-wrapper" state={story} to="/stories">
+        <img src={story.story_user.image} alt="user story" />
+      </NavLink>
+      <p>{story.story_user.name}</p>
     </div>
   );
 };

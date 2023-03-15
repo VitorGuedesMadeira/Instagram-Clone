@@ -9,6 +9,7 @@ import MessagesPage from './pages/MessagesPage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import CommentsPage from './pages/CommentsPage';
+import StoriesPage from './pages/StoriesPage';
 import './App.scss';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/messages" element={<MessagesPage />} />
           <Route path="/comments" element={<CommentsPage />} />
+          <Route path="/stories" element={<StoriesPage />} />
 
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />

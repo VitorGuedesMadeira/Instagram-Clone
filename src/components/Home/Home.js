@@ -8,15 +8,31 @@ import Post from './Post/Post';
 import Story from './Story/Story';
 import UserStory from './UserStory/UserStory';
 import getPosts from '../../redux/thunks/postsThunk';
+import getStories from '../../redux/thunks/storiesThunk';
 import './Home.scss';
 
 const Home = () => {
   const posts = useSelector((state) => state.posts.data);
+  const stories = useSelector((state) => state.stories.data);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(getStories());
     dispatch(getPosts());
   }, []);
+
+  const removeDuplicateStories = (stories_to_filter) => {
+    const uniqueStories = [];
+    const ids = [];
+
+    stories_to_filter.forEach((story) => {
+      if (!ids.includes(story.story_user.id)) {
+        ids.push(story.story_user.id);
+        uniqueStories.push(story);
+      }
+    });
+    return uniqueStories;
+  };
 
   return (
     <div id="home-wrapper">
@@ -43,25 +59,9 @@ const Home = () => {
 
       <div id="home-wrapper__stories">
         <UserStory />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
-        <Story />
+        {removeDuplicateStories(stories).map((story) => (
+          <Story key={story.id} story={story} />
+        ))}
       </div>
 
       <div id="home-wrapper__posts">
