@@ -31,7 +31,8 @@ input[type="file"] {
   position: relative;
 }
 
-.image-popup {
+.image-popup,
+.share-popup {
   position: absolute;
   top: 0;
   left: 0;

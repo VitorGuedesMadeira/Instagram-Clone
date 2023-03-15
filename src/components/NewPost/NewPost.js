@@ -11,6 +11,7 @@ const NewPost = () => {
   const [fileLabel, setFileLabel] = useState('Select From Computer');
   const [selectedImage, setSelectedImage] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
+  const [showSharePopup, setShowSharePopup] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ const NewPost = () => {
       formData.append('post[images][]', image);
     });
     dispatch(postNewPost(formData));
+    setShowSharePopup(false);
     navigate('/');
   };
 
@@ -35,6 +37,11 @@ const NewPost = () => {
   };
 
   const handleRedirection = () => navigate('/');
+
+  const handleNextClick = () => {
+    setShowPopup(false);
+    setShowSharePopup(true);
+  };
 
   return (
     <div className="modal">
@@ -51,7 +58,11 @@ const NewPost = () => {
               <div className="image-popup">
                 <div className="popup-head">
                   <h2>Crop</h2>
-                  <button type="submit" className="next-btn">
+                  <button
+                    type="button"
+                    className="next-btn"
+                    onClick={handleNextClick}
+                  >
                     Next
                   </button>
                 </div>
@@ -60,9 +71,27 @@ const NewPost = () => {
                   alt="Selected"
                   className="upload-img"
                 />
+              </div>
+            )}
+            {showSharePopup && (
+              <div className="share-popup">
+                <div className="popup-head">
+                  <h2>Create new post</h2>
+                  <input
+                    className="next-btn"
+                    type="submit"
+                    value="Share"
+                    onClick={handleSubmit}
+                  />
+                </div>
+                <img
+                  src={selectedImage}
+                  alt="Selected"
+                  className="upload-img"
+                />
                 <input
                   type="text"
-                  placeholder="title"
+                  placeholder="Caption"
                   name="title"
                   className="title-input-box"
                   value={title}
@@ -70,16 +99,9 @@ const NewPost = () => {
                     setTitle(e.target.value);
                   }}
                 />
-                {title !== '' && (
-                  <input
-                    className="post-submit"
-                    type="submit"
-                    value="Post"
-                    onClick={handleSubmit}
-                  />
-                )}
               </div>
             )}
+
             {!showPopup && (
               <div className="drag-and-drop">
                 <img src={uploadIcon} alt="Drag images symbol" />
