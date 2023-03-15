@@ -28,6 +28,17 @@ input[type="file"] {
   border: 1px solid #888;
   width: 95%;
   color: white;
+  position: relative;
+}
+
+.image-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #262626;
+  z-index: 9999;
+  border-radius: 15px;
 }
 
 .modal-head {
@@ -81,4 +92,21 @@ input[type='text'] {
   border-bottom: 1px solid #262626;
   width: 100%;
   margin-bottom: 20px;
+}
+
+.upload-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.next-btn {
+  border: none;
+  background: #262626;
+  color: white;
+}
+
+.popup-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
