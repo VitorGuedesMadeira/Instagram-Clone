@@ -23,7 +23,12 @@ const Post = (props) => {
         </div>
       </div>
 
-      <img id="user-post-picture" src={post.image_urls[0]} alt="post" />
+      <img
+        id="user-post-picture"
+        className={post.image_urls && post.image_urls[0]}
+        src={post.image_urls && post.image_urls[0]}
+        alt="post"
+      />
 
       <div id="user-down-bar">
         <div id="likes-comments-redirect">
