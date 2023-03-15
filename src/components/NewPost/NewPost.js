@@ -7,6 +7,7 @@ import './NewPost.scss';
 const NewPost = () => {
   const [images, setImages] = useState([]);
   const [title, setTitle] = useState('');
+  const [showTitleInput, setShowTitleInput] = useState(false);
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -23,6 +24,7 @@ const NewPost = () => {
   const handleImageUpload = (event) => {
     const files = Array.from(event.target.files);
     setImages(files);
+    setShowTitleInput(true);
   };
 
   return (
@@ -48,18 +50,21 @@ const NewPost = () => {
                 multiple
               />
             </label>
-
-            <input
-              type="text"
-              placeholder="title"
-              name="title"
-              className="title-input-box"
-              value={title}
-              onChange={(e) => {
-                setTitle(e.target.value);
-              }}
-            />
-            <input className="post-submit" type="submit" value="Post" />
+            {showTitleInput && (
+              <input
+                type="text"
+                placeholder="caption"
+                name="title"
+                className="title-input-box"
+                value={title}
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                }}
+              />
+            )}
+            {showTitleInput && (
+              <input className="post-submit" type="submit" value="Post" />
+            )}
           </form>
         </div>
       </div>
