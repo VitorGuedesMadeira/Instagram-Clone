@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import postNewPost from '../../redux/thunks/newPostThunk';
 import uploadIcon from '../../assets/icons/upload.png';
 import './NewPost.scss';
@@ -9,6 +10,7 @@ const NewPost = () => {
   const [title, setTitle] = useState('');
   const [fileLabel, setFileLabel] = useState('Select From Computer');
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +21,7 @@ const NewPost = () => {
       formData.append('post[images][]', image);
     });
     dispatch(postNewPost(formData));
+    navigate('/');
   };
 
   const handleImageUpload = (event) => {
