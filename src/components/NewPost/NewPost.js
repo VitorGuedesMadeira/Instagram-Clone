@@ -7,7 +7,7 @@ import './NewPost.scss';
 const NewPost = () => {
   const [images, setImages] = useState([]);
   const [title, setTitle] = useState('');
-  const [showTitleInput, setShowTitleInput] = useState(false);
+  const [fileLabel, setFileLabel] = useState('Select From Computer');
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -24,7 +24,7 @@ const NewPost = () => {
   const handleImageUpload = (event) => {
     const files = Array.from(event.target.files);
     setImages(files);
-    setShowTitleInput(true);
+    setFileLabel(`Uploaded ${files.length} file${files.length > 1 ? 's' : ''}`);
   };
 
   return (
@@ -41,7 +41,7 @@ const NewPost = () => {
           <h3>Drag photos and videos here</h3>
           <form onSubmit={handleSubmit}>
             <label htmlFor="file-upload" className="custom-file-upload">
-              Select From Computer
+              {fileLabel}
               <input
                 id="file-upload"
                 type="file"
@@ -50,10 +50,11 @@ const NewPost = () => {
                 multiple
               />
             </label>
-            {showTitleInput && (
+
+            {images.length > 0 && (
               <input
                 type="text"
-                placeholder="caption"
+                placeholder="title"
                 name="title"
                 className="title-input-box"
                 value={title}
@@ -62,7 +63,7 @@ const NewPost = () => {
                 }}
               />
             )}
-            {showTitleInput && (
+            {title !== '' && (
               <input className="post-submit" type="submit" value="Post" />
             )}
           </form>
