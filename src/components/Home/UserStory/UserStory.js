@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import plusIcon from '../../../assets/icons/new-post.png';
+import plusIcon from '../../../assets/icons/plus.png';
 import './UserStory.scss';
 
 const UserStory = () => {

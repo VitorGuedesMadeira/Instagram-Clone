@@ -2,13 +2,8 @@
 import React from 'react';
 import './ProfilePost.scss';
 
-const ProfilePost = () => {
-  const profile = 'Picture';
-  return (
-    <div id="feed-post-image">
-      {profile}
-    </div>
-  );
-};
+const ProfilePost = () => (
+  <div id="feed-post-image" />
+);
 
 export default ProfilePost;

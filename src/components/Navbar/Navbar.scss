@@ -4,9 +4,13 @@
   bottom: 0;
   background-color: white;
   width: 375px;
-  padding: 0 10px;
+  padding: 0 0.5rem;
   border-top: 1px solid lightgray;
   z-index: 1;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   /* 2 */
   ul {

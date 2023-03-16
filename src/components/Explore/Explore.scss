@@ -1,14 +1,19 @@
 /* 1 */
 #explore-section-wrapper {
+  background-color: white;
+  height: 100%;
+  overflow: hidden;
+
   /* 2 */
   #explore-navigation-bar {
-    background-color: black;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 3rem;
     padding: 0 0.5rem;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 375px;
     border-bottom: 1px solid lightgray;
 
@@ -20,6 +25,7 @@
       width: 100%;
       padding: 0 10px;
       background-color: white;
+      border: 1px solid lightgray;
 
       /* 4 */
       img {
@@ -42,8 +48,9 @@
   #explore-posts {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 3rem;
+    justify-content: center;
     gap: 1px;
+    margin: -1px;
 
     /* 3 */
     img {

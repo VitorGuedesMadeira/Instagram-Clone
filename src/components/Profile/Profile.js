@@ -25,7 +25,7 @@ const Profile = () => {
 
       <div id="profile-section-wrapper__user-info">
         <div id="profile-section-wrapper__picture-div">
-          <div />
+          <img src="" alt="user" />
         </div>
 
         <div id="profile-section-wrapper__posts-followers-following">

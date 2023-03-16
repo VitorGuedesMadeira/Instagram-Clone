@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
+
 import postNewPost from '../../redux/thunks/newPostThunk';
 import uploadIcon from '../../assets/icons/upload.png';
+import closeIcon from '../../assets/icons/cross.png';
 import './NewPost.scss';
 
 const NewPost = () => {
@@ -36,8 +38,6 @@ const NewPost = () => {
     setShowPopup(true);
   };
 
-  const handleRedirection = () => navigate('/');
-
   const handleNextClick = () => {
     setShowPopup(false);
     setShowSharePopup(true);
@@ -45,22 +45,21 @@ const NewPost = () => {
 
   return (
     <div className="modal">
-      <button type="submit" className="close" onClick={handleRedirection}>
-        &times;
-      </button>
+      <NavLink to="/">
+        <img className="close" src={closeIcon} alt="close button" />
+      </NavLink>
       <div className="modal-content">
         <div className="modal-head">
           <h2>Create new post</h2>
         </div>
         <div className="modal-body">
-          <form onSubmit={handleSubmit}>
+          <form id="new-post-form" onSubmit={handleSubmit}>
             {showPopup && (
               <div className="image-popup">
                 <div className="popup-head">
-                  <h2>Crop</h2>
+                  <button type="button">Crop</button>
                   <button
                     type="button"
-                    className="next-btn"
                     onClick={handleNextClick}
                   >
                     Next
@@ -76,13 +75,8 @@ const NewPost = () => {
             {showSharePopup && (
               <div className="share-popup">
                 <div className="popup-head">
-                  <h2>Create new post</h2>
-                  <input
-                    className="next-btn"
-                    type="submit"
-                    value="Share"
-                    onClick={handleSubmit}
-                  />
+                  <button type="button">Create new post</button>
+                  <button type="submit" onClick={handleSubmit}>Share</button>
                 </div>
                 <img
                   src={selectedImage}
@@ -90,6 +84,7 @@ const NewPost = () => {
                   className="upload-img"
                 />
                 <input
+                  id="new-post-input"
                   type="text"
                   placeholder="Caption"
                   name="title"
@@ -103,8 +98,8 @@ const NewPost = () => {
             )}
 
             {!showPopup && (
-              <div className="drag-and-drop">
-                <img src={uploadIcon} alt="Drag images symbol" />
+              <div id="drag-and-drop">
+                <img id="upload-image-icon" src={uploadIcon} alt="Drag images symbol" />
                 <h3>Drag photos and videos here</h3>
               </div>
             )}
