@@ -9,7 +9,7 @@
 
   /* 2 */
   .image-wrapper {
-    padding: 2px;
+    padding: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,8 +18,8 @@
 
     /* 3 */
     img {
-      background-color: rgb(137, 137, 137);
-      border: 2px solid white;
+      background-color: lightgray;
+      border: 3px solid white;
       width: 45px;
       border-radius: 50%;
       aspect-ratio: 1 / 1;

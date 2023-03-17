@@ -1,6 +1,6 @@
 /* 1 */
 #messages-section-wrapper {
-  background-color: blue;
+  background-color: white;
   width: 375px;
 
   /* 2 */
@@ -8,8 +8,8 @@
     position: sticky;
     top: 0;
     width: 375px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,11 +21,10 @@
     #messages-section-wrapper__navigation-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 1.5rem;
 
       img {
         width: 1.25rem;
-        filter: invert(1);
       }
     }
   }
@@ -45,23 +44,24 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: purple;
-      border-bottom: 2px solid grey;
+      background-color: lightgray;
+      cursor: pointer;
     }
   }
 
   /* 2 */
   #messages-section-wrapper__search {
-    background-color: red;
+    background-color: white;
     height: 40px;
     width: 375px;
     padding: 0 0.5rem;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid lightgray;
 
     /* 3 */
     input {
-      background-color: orange;
+      background-color: lightgray;
       width: 100%;
       padding: 5px 0.5rem;
       border: none;
@@ -73,7 +73,7 @@
   /* 2 */
   #messages-section-wrapper__individual-chats {
     width: 375px;
-    background-color: green;
+    background-color: white;
     display: flex;
     flex-direction: column;
   }

@@ -62,8 +62,12 @@
   /* 2 */
   #home-wrapper__posts {
     display: flex;
-    min-height: 100vh;
+    min-height: calc(100vh - 11rem);
     flex-direction: column;
+
+    #loading {
+      width: 100%;
+    }
   }
 
   /* 2 */

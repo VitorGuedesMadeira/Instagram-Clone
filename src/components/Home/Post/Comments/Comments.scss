@@ -237,7 +237,7 @@
 
       /* 4 */
       img {
-        background-color: grey;
+        background-color: lightgray;
         min-width: 2.5rem;
         min-height: 2.5rem;
         border-radius: 50%;
@@ -273,5 +273,9 @@
         }
       }
     }
+  }
+
+  #loading {
+    width: 100%;
   }
 }

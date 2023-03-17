@@ -14,7 +14,7 @@ const Story = (props) => {
       <NavLink className="image-wrapper" state={{ stories, index }} to="/stories">
         <img src={story[0].story_user.image} alt="user story" />
       </NavLink>
-      <p>{story[0].story_user.name}</p>
+      <p>{story[0].story_user.name.split(' ')[0]}</p>
     </div>
   );
 };
