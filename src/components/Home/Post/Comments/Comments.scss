@@ -103,6 +103,12 @@
             border: none;
             font-size: 0.75em;
             cursor: pointer;
+            transition: 0.25s;
+          }
+
+          /* active */
+          button:active {
+            color: grey;
           }
         }
       }

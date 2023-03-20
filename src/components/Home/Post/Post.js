@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -45,12 +46,24 @@ const Post = (props) => {
         </div>
       </div>
 
-      <img
-        id="user-post-picture"
-        className={post.image_urls && post.image_urls[0]}
-        src={post.image_urls && post.image_urls[0]}
-        alt="post"
-      />
+      <div className="user-post-div">
+        {post.image_urls && post.image_urls.map((photo, index) => (
+          <div key={photo} className="user-post-picture-wrapper">
+            <img
+              className="user-post-picture"
+              src={photo}
+              alt="post"
+            />
+            {post.image_urls.length > 1 ? (
+              <p className="user-post-picture-counter">
+                {index + 1}
+                /
+                {post.image_urls.length}
+              </p>
+            ) : null}
+          </div>
+        ))}
+      </div>
 
       <div id="user-down-bar">
         <div id="likes-comments-redirect">
@@ -81,10 +94,11 @@ const Post = (props) => {
         : null}
 
       <div id="user-name-subtitle">
-        <div>
-          <strong>{post.post_user.name}</strong>
-        </div>
-        <div>{post.title}</div>
+        <p>
+          <span><strong>{post.post_user.username}</strong></span>
+          <span>{' '}</span>
+          <span>{post.title}</span>
+        </p>
       </div>
 
       {post.post_comments.length > 0
@@ -125,12 +139,14 @@ Post.propTypes = {
     post_user: PropTypes.shape({
       image: PropTypes.string,
       name: PropTypes.string,
+      username: PropTypes.string,
     }),
     image_urls: PropTypes.shape([PropTypes.string]),
     post_likes: PropTypes.shape([]),
     post_comments: PropTypes.shape([]),
     title: PropTypes.string,
   }).isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Post;

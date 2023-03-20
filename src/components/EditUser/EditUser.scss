@@ -1,0 +1,15 @@
+/* 1 */
+#edit-user-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  /* 2 */
+  #edit-user-wrapper__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    height: 3rem;
+    padding: 0 0.5rem;
+  }
+}

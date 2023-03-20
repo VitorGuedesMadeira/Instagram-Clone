@@ -80,7 +80,7 @@ const Comments = () => {
               <NavLink to="/">
                 <img src={backIcon} alt="back" />
               </NavLink>
-              <p>Comments</p>
+              <p><strong>Comments</strong></p>
             </div>
             <img src={directIcon} alt="direct" />
           </div>
@@ -94,7 +94,7 @@ const Comments = () => {
                 <div className="comments-wrapper__information">
                   <div>
                     {post.post_user && (
-                    <p>{post.post_user.name}</p>)}
+                    <p><strong>{post.post_user.name}</strong></p>)}
                     <small>{moment(post.created_at).fromNow(true).replace('minutes', 'min')}</small>
                   </div>
                   <p>{post && post.title}</p>
@@ -108,7 +108,7 @@ const Comments = () => {
                       <img src={comment.user.image} alt="user" />
                       <div className="comments-wrapper__information">
                         <div className="comments-wrapper__gap">
-                          <p>{comment.user.name}</p>
+                          <p><strong>{comment.user.name}</strong></p>
                           <small>{moment(comment.created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')}</small>
                         </div>
                         <p>{comment.text}</p>
@@ -162,7 +162,7 @@ const Comments = () => {
                           <img src={reply.user.image} alt="reply user" />
                           <div className="comments-wrapper__reply-information">
                             <div className="comments-wrapper__reply-gap">
-                              <p>{reply.user.name}</p>
+                              <p><strong>{reply.user.name}</strong></p>
                               <small>
                                 {moment(reply.created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')
                                   .replace('few seconds', 'minute')}

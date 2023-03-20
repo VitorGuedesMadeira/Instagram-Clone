@@ -49,21 +49,46 @@
 
       /* 4 */
       img {
-        width: 24px;
+        width: 16px;
         cursor: pointer;
       }
     }
   }
 
   /* 2 */
-  #user-post-picture {
+  .user-post-div {
     display: flex;
-    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     align-items: center;
-    width: 100%;
-    background-color: lightgray;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+
+    /* 3 */
+    .user-post-picture-wrapper {
+      scroll-snap-align: start;
+      min-width: 100%;
+      aspect-ratio: 1 / 1;
+      position: relative;
+
+      /* 4 */
+      .user-post-picture {
+        background-color: lightgray;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      /* 4 */
+      .user-post-picture-counter {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border-radius: 25px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0.25rem 0.5rem;
+        color: white;
+        font-size: 0.75em;
+      }
+    }
   }
 
   /* 2 */
@@ -111,11 +136,10 @@
   /* 2 */
   #user-name-subtitle {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     height: 100%;
     background-color: white;
-    gap: 10px;
+    gap: 0.5rem;
     padding: 0 0.5rem;
   }
 

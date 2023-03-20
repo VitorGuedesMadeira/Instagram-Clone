@@ -30,7 +30,7 @@ const ExploreFeed = () => {
         <NavLink to="/explore">
           <img src={backIcon} alt="back-icon" />
         </NavLink>
-        <div>Posts you may like</div>
+        <div><strong>Posts you may like</strong></div>
         <div />
       </div>
 

@@ -11,6 +11,9 @@ import SignUpPage from './pages/SignUpPage';
 import NewPostPage from './pages/NewPostPage';
 import CommentsPage from './pages/CommentsPage';
 import StoriesPage from './pages/StoriesPage';
+import NewStoryPage from './pages/NewStoryPage';
+import PostStoryPage from './pages/PostStoryPage';
+import EditUserPage from './pages/EditUserPage';
 import './App.scss';
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
           <Route path="/new-post" element={<NewPostPage />} />
           <Route path="/comments" element={<CommentsPage />} />
           <Route path="/stories" element={<StoriesPage />} />
+          <Route path="/new-story" element={<NewStoryPage />} />
+          <Route path="/post-story" element={<PostStoryPage />} />
+          <Route path="/edit-user" element={<EditUserPage />} />
 
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />

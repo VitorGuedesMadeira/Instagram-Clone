@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import './Profile.scss';
+import { NavLink } from 'react-router-dom';
 import ProfilePost from './ProfilePost/ProfilePost';
 import plusIcon from '../../assets/icons/new-post.png';
+import addIcon from '../../assets/icons/plus.png';
 import hamburgerIcon from '../../assets/icons/hamburger.png';
+import './Profile.scss';
 
 const Profile = () => {
   useEffect(() => {
@@ -12,7 +14,7 @@ const Profile = () => {
   return (
     <div id="profile-section-wrapper">
       <div id="profile-section-wrapper__navigation">
-        <p>userName</p>
+        <strong>@usertag</strong>
         <div>
           <a href="https://google.com/">
             <img src={plusIcon} alt="plus-icon" />
@@ -30,40 +32,85 @@ const Profile = () => {
 
         <div id="profile-section-wrapper__posts-followers-following">
           <div id="profile-section-wrapper__posts-counter">
-            <p>74</p>
+            <p><strong>74</strong></p>
             <p>Posts</p>
           </div>
 
           <div id="profile-section-wrapper__followers-counter">
-            <p>419</p>
+            <p><strong>419</strong></p>
             <p>followers</p>
           </div>
 
           <div id="profile-section-wrapper__following-counter">
-            <p>692</p>
+            <p><strong>692</strong></p>
             <p>Following</p>
           </div>
         </div>
       </div>
 
       <div id="profile-section-wrapper__name-description">
-        <div>userName</div>
-        <div>bioDescription</div>
+        <div><strong>User name</strong></div>
+        <div>Bio description</div>
       </div>
 
       <div id="profile-section-wrapper__edit-profile">
-        <div>Edit profile</div>
+        <NavLink to="/edit-user">
+          <strong>Edit profile</strong>
+        </NavLink>
+        <NavLink to="/edit-user">
+          <strong>Share profile</strong>
+        </NavLink>
+        <img src={plusIcon} alt="plus-icon" />
       </div>
 
       <div id="profile-section-wrapper__user-interfaces">
-        <div>Story Highlights</div>
+        <p><strong>Story Highlights</strong></p>
+        <p>Keep your favorite stories on your profile</p>
+        <div id="profile-section-wrapper__highlights">
+          <div className="profile-section-wrapper__flex">
+            <div className="profile-section-wrapper__add-highlighted-story">
+              <img src={addIcon} alt="plus" />
+            </div>
+            <p>New</p>
+          </div>
+
+          <div className="profile-section-wrapper__flex">
+            <div className="profile-section-wrapper__highlighted-story" />
+          </div>
+
+          <div className="profile-section-wrapper__flex">
+            <div className="profile-section-wrapper__highlighted-story" />
+          </div>
+
+          <div className="profile-section-wrapper__flex">
+            <div className="profile-section-wrapper__highlighted-story" />
+          </div>
+
+          <div className="profile-section-wrapper__flex">
+            <div className="profile-section-wrapper__highlighted-story" />
+          </div>
+
+          <div className="profile-section-wrapper__flex">
+            <div className="profile-section-wrapper__highlighted-story" />
+          </div>
+
+          <div className="profile-section-wrapper__flex">
+            <div className="profile-section-wrapper__highlighted-story" />
+          </div>
+
+        </div>
       </div>
 
       <div id="profile-section-wrapper__interfaces-buttons">
-        <div>Icon1</div>
-        <div>Icon2</div>
-        <div>Icon3</div>
-        <div>Icon4</div>
+        <div>
+          <img src={plusIcon} alt="plus-icon" />
+        </div>
+        <div>
+          <img src={plusIcon} alt="plus-icon" />
+        </div>
+        <div>
+          <img src={plusIcon} alt="plus-icon" />
+        </div>
       </div>
 
       <div id="profile-section-wrapper__profile-posts">

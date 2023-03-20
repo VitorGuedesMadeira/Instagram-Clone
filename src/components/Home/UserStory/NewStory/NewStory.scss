@@ -1,0 +1,145 @@
+/* 1 */
+#new-story-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: black;
+
+  /* 2 */
+  #new-story-wrapper__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 3rem;
+    padding: 0 0.5rem;
+    color: white;
+
+    /* 3 */
+    #close {
+      width: 24px;
+      height: 24px;
+      filter: invert(1);
+    }
+
+    /* 3 */
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+
+      /* 4 */
+      #settings {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  /* 2 */
+  #new-story-wrapper__selection {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    position: sticky;
+    bottom: 0;
+    overflow: hidden;
+
+    /* 3 */
+    #new-story-wrapper__options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.5rem;
+      min-height: 3rem;
+
+      /* 4 */
+      #new-story-wrapper__select-file {
+        display: flex;
+        gap: 0.5rem;
+
+        /* 5 */
+        img {
+          margin-top: 0.25rem;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      /* 4 */
+      #new-story-wrapper__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(128, 128, 128, 0.25);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 25px;
+        gap: 0.5rem;
+
+        /* 5 */
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    /* 3 */
+    #new-story-wrapper__image-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1px;
+      margin: -2px;
+      overflow: auto;
+
+      /* 4 */
+      #new-story-wrapper__select-option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        width: calc((100% / 3) - 1px);
+        aspect-ratio: 9 / 16;
+        position: relative;
+        object-fit: cover;
+        cursor: pointer;
+
+        /* 5 */
+        img {
+          width: 32px;
+          height: 32px;
+          filter: invert(1);
+          object-fit: cover;
+        }
+
+        /* 5 */
+        p {
+          position: absolute;
+          bottom: 0.5rem;
+          left: 0.5rem;
+          color: white;
+        }
+      }
+
+      /* 4 */
+      .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: calc((100% / 3) - 1px);
+
+        /* 5 */
+        img {
+          background-color: black;
+          width: 100%;
+          object-fit: contain;
+          aspect-ratio: 9 / 16;
+        }
+      }
+    }
+  }
+}

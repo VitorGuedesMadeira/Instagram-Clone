@@ -16,7 +16,6 @@
     height: 3rem;
     padding: 0 0.5rem;
     z-index: 1;
-    border-bottom: 1px solid lightgray;
 
     /* 3 */
     div {
@@ -39,15 +38,14 @@
   #profile-section-wrapper__user-info {
     width: 375px;
     display: flex;
-    height: 4rem;
-    background-color: grey;
-    color: white;
+    justify-content: space-between;
+    height: 6rem;
     padding: 0 0.5rem;
     align-items: center;
 
     /* 3 */
     #profile-section-wrapper__picture-div {
-      padding: 2px;
+      padding: 3px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -56,18 +54,19 @@
 
       /* 4 */
       img {
-        height: 50px;
-        width: 50px;
-        background-color: blue;
+        height: 5rem;
+        width: 5rem;
+        background-color: lightgray;
         border-radius: 50%;
-        border: 2px solid grey;
+        border: 3px solid white;
       }
     }
 
     /* 3 */
     #profile-section-wrapper__posts-followers-following {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: flex-end;
+      gap: 1.5rem;
       flex: 2;
 
       /* 4 */
@@ -108,20 +107,32 @@
   #profile-section-wrapper__edit-profile {
     display: flex;
     align-items: center;
-    height: 40px;
-    width: 375px;
-    background-color: lightgray;
+    justify-content: space-between;
+    height: 3rem;
+    width: 100%;
+    background-color: white;
     padding: 0.5rem;
+    gap: 0.5rem;
 
     /* 3 */
-    div {
+    a {
+      background-color: lightgrey;
+      flex: 4;
+      height: 100%;
       display: flex;
-      width: 375px;
       justify-content: center;
-      background-color: grey;
-      color: white;
-      padding: 0.25rem 0;
-      border-radius: 5px;
+      align-items: center;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      color: black;
+    }
+
+    img {
+      flex: 1;
+      background-color: lightgrey;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 0.25rem;
     }
   }
 
@@ -132,11 +143,50 @@
     background-color: white;
     justify-content: center;
     width: 375px;
-    height: 40px;
+    padding: 0.5rem;
 
     /* 3 */
-    div {
-      padding: 0 0.5rem;
+    #profile-section-wrapper__highlights {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+
+      /* 4 */
+      .profile-section-wrapper__flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0.5rem;
+
+        /* 5 */
+        .profile-section-wrapper__add-highlighted-story {
+          height: 3rem;
+          width: 3rem;
+          background-color: white;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid lightgray;
+
+          /* 6 */
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        /* 5 */
+        .profile-section-wrapper__highlighted-story {
+          height: 3rem;
+          width: 3rem;
+          background-color: lightgray;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
     }
   }
 
@@ -146,11 +196,16 @@
     height: 40px;
     display: flex;
     align-items: center;
-    background-color: grey;
-    color: white;
+    background-color: white;
     justify-content: space-between;
-    padding: 0 2rem;
     cursor: pointer;
+
+    div {
+      width: calc(100% / 3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   /* 2 */

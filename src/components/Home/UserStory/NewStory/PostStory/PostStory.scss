@@ -1,0 +1,130 @@
+/* 1 */
+#post-story-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(17, 17, 17);
+
+  /* 2 */
+  #post-story-wrapper__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 100%;
+    background-image: linear-gradient(to top, black, rgba(255, 255, 255, 0.5));
+    overflow: hidden;
+    position: relative;
+
+    /* 3 */
+    #post-story-wrapper__header-options {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      color: white;
+      padding: 0.5rem;
+
+      /* 4 */
+      #post-story-wrapper__back {
+        border-radius: 25px;
+        background-color: rgb(72, 72, 72);
+        padding: 0.5rem;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        /* 5 */
+        img {
+          filter: invert(1);
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      /* 4 */
+      #post-story-wrapper__effects {
+        display: flex;
+        gap: 0.5rem;
+
+        /* 5 */
+        button {
+          border-radius: 25px;
+          background-color: rgb(72, 72, 72);
+          padding: 0.5rem;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: white;
+        }
+      }
+    }
+
+    /* 3 */
+    img {
+      width: 100%;
+    }
+  }
+
+  /* 2 */
+  #post-story-wrapper__post-options {
+    display: flex;
+    align-items: center;
+    max-height: 3rem;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    padding: 0.5rem;
+
+    /* 3 */
+    .buttons {
+      border-radius: 25px;
+      background-color: rgba(128, 128, 128, 0.25);
+      padding: 0.5rem;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      /* 4 */
+      img {
+        background-color: blue;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+
+      /* 4 */
+      p {
+        padding: 0 1rem;
+      }
+    }
+
+    /* 3 */
+    #next-button {
+      border-radius: 25px;
+      background-color: white;
+      padding: 0.5rem;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      /* 4 */
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
