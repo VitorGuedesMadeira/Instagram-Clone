@@ -1,4 +1,121 @@
+/* 1 */
 #sign-in-wrapper {
-  background-color: lightsteelblue;
+  background-color: white;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 4rem;
+
+  /* 2 */
+  #sign-in-wrapper__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    /* 3 */
+    #sign-in-wrapper__instagram-logo {
+      padding: 3rem 0;
+      width: 75%;
+    }
+
+    /* 3 */
+    #sign-in-wrapper__facebook-button {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      background-color: #405de6;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      width: 100%;
+      cursor: pointer;
+
+      /* 4 */
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    /* 3 */
+    #sign-in-wrapper__or {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+      color: gray;
+
+      div {
+        width: 100%;
+        height: 1px;
+        background-color: gray;
+      }
+    }
+
+    /* 3 */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+      width: 100%;
+
+      /* 4 */
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid rgb(175, 175, 175);
+        border-radius: 3px;
+        background-color: rgb(230, 230, 230);
+        outline: none;
+      }
+
+      /* 4 */
+      p {
+        color: #405de6;
+      }
+
+      /* 4 */
+      button {
+        width: 100%;
+        background-color: #405de6;
+        color: white;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    /* 3 */
+    #sign-in-wrapper__sign-up {
+      display: flex;
+      gap: 0.25rem;
+
+      /* 4 */
+      #link {
+        color: #405de6;
+        text-decoration: none;
+      }
+    }
+  }
+
+  /* 2 */
+  #sign-in-wrapper__from-meta {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 35%;
+    }
+  }
 }

@@ -1,0 +1,27 @@
+#explore-feed-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  #explore-feed-section-wrapper__navigation {
+    display: flex;
+    justify-content: space-between;
+    min-height: 3rem;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    padding: 0 0.5rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+
+    img {
+      width: 24px;
+    }
+  }
+
+  #explore-feed-section-wrapper__feed {
+    display: flex;
+    flex-direction: column;
+  }
+}

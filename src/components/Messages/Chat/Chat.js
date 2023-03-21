@@ -10,7 +10,9 @@ const Chat = () => {
   return (
     <div id="chat-wrapper">
       <div id="chat-wrapper__user">
-        <div id="chat-wrapper__user-image" />
+        <div id="chat-wrapper__user-image">
+          <img src="" alt="user" />
+        </div>
         <div id="chat-wrapper__user-info">
           <p>userName</p>
           <p>Seen 1h ago</p>

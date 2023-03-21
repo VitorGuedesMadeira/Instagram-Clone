@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect, useState } from 'react';
 import { useLocation, NavLink, useNavigate } from 'react-router-dom';
+import moment from 'moment';
 import crossIcon from '../../../../assets/icons/cross.png';
 import likeIcon from '../../../../assets/icons/like.png';
 import directIcon from '../../../../assets/icons/direct.png';
@@ -58,9 +59,12 @@ const StoryPost = () => {
             <div id="story-post-wrapper__information">
               <div id="story-post-wrapper__flex">
                 <img src={item[0].story_user.image} alt="story" />
-                <div>
-                  <p>{item[0].story_user.name}</p>
-                  <p>music</p>
+                <div className="story-post-wrapper__information">
+                  <div>
+                    <p>{item[0].story_user.username}</p>
+                    {moment(item[0].created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')}
+                  </div>
+                  <p>music/filter</p>
                 </div>
               </div>
               <NavLink to="/">

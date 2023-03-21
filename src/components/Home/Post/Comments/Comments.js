@@ -6,6 +6,7 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import directIcon from '../../../../assets/icons/direct.png';
 import backIcon from '../../../../assets/icons/back.png';
+import loadingGif from '../../../../assets/gifs/instagram.gif';
 import newComment from '../../../../redux/thunks/newCommentThunk';
 import newReply from '../../../../redux/thunks/newReplyThunk';
 import getPost from '../../../../redux/thunks/postThunk';
@@ -79,12 +80,12 @@ const Comments = () => {
               <NavLink to="/">
                 <img src={backIcon} alt="back" />
               </NavLink>
-              <p>Comments</p>
+              <p><strong>Comments</strong></p>
             </div>
             <img src={directIcon} alt="direct" />
           </div>
 
-          {loading ? 'loading' : (
+          {loading ? <img id="loading" src={loadingGif} alt="loading" /> : (
             <>
               <div id="comments-wrapper__post-title">
                 {post.post_user && (
@@ -93,8 +94,8 @@ const Comments = () => {
                 <div className="comments-wrapper__information">
                   <div>
                     {post.post_user && (
-                    <p>{post.post_user.name}</p>)}
-                    <small>{moment(post.created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')}</small>
+                    <p><strong>{post.post_user.name}</strong></p>)}
+                    <small>{moment(post.created_at).fromNow(true).replace('minutes', 'min')}</small>
                   </div>
                   <p>{post && post.title}</p>
                 </div>
@@ -107,7 +108,7 @@ const Comments = () => {
                       <img src={comment.user.image} alt="user" />
                       <div className="comments-wrapper__information">
                         <div className="comments-wrapper__gap">
-                          <p>{comment.user.name}</p>
+                          <p><strong>{comment.user.name}</strong></p>
                           <small>{moment(comment.created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')}</small>
                         </div>
                         <p>{comment.text}</p>
@@ -161,8 +162,11 @@ const Comments = () => {
                           <img src={reply.user.image} alt="reply user" />
                           <div className="comments-wrapper__reply-information">
                             <div className="comments-wrapper__reply-gap">
-                              <p>{reply.user.name}</p>
-                              <small>{moment(reply.created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')}</small>
+                              <p><strong>{reply.user.name}</strong></p>
+                              <small>
+                                {moment(reply.created_at).fromNow(true).replace('hours', 'h').replace('minutes', 'min')
+                                  .replace('few seconds', 'minute')}
+                              </small>
                             </div>
                             <p>{reply.text}</p>
                             <div className="comments-wrapper__reply-flex">

@@ -12,11 +12,25 @@
 
     /* 3 */
     #chat-wrapper__user-image {
-      width: 50px;
-      height: 50px;
-      background-color: yellow;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 50%;
-      border: 1px solid blue;
+      background-image: linear-gradient(45deg, #f58529, #feda77, #dd2a7b, #8134af, #515bd4);
+
+      /* 4 */
+      img {
+        background-color: lightgray;
+        border: 3px solid white;
+        width: 45px;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
     }
 
     /* 3 */
@@ -34,5 +48,5 @@
 }
 
 #chat-wrapper:hover {
-  background-color: rgb(0, 95, 0);
+  background-color: lightgray;
 }

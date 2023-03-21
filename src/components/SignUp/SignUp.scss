@@ -1,4 +1,56 @@
+/* 1 */
 #sign-up-wrapper {
-  background-color: lightsteelblue;
+  background-color: white;
   height: 100vh;
+
+  /* 2 */
+  #sign-up-wrapper__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    height: 3rem;
+    padding: 0.5rem;
+
+    /* 3 */
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  /* 2 */
+  #sign-up-wrapper__form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 4rem;
+    text-align: center;
+    color: gray;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 0.5rem;
+
+      input {
+        padding: 0.5rem;
+        border: 1px solid rgb(175, 175, 175);
+        border-radius: 3px;
+        background-color: rgb(230, 230, 230);
+        outline: none;
+      }
+
+      button {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: #405de6;
+        color: white;
+      }
+    }
+  }
 }

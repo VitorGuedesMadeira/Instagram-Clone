@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import likeIcon from '../../assets/icons/like.png';
+import loadingGif from '../../assets/gifs/instagram.gif';
 import commentIcon from '../../assets/icons/comment-balloon-nav.png';
 import Post from './Post/Post';
 import Story from './Story/Story';
@@ -14,6 +15,7 @@ import './Home.scss';
 const Home = () => {
   const posts = useSelector((state) => state.posts.data);
   const stories = useSelector((state) => state.stories.data);
+  const loading = useSelector((state) => state.posts.loading);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -68,9 +70,11 @@ const Home = () => {
       </div>
 
       <div id="home-wrapper__posts">
-        {posts.map((post) => (
-          <Post key={post.id} post={post} />
-        ))}
+        {loading
+          ? <img id="loading" src={loadingGif} alt="loading" />
+          : (posts.map((post, index) => (
+            <Post key={post.id} id={index} post={post} />
+          )))}
       </div>
     </div>
   );
