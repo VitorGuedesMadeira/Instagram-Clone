@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable camelcase */
+import { isFulfilled } from '@reduxjs/toolkit';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -14,6 +15,7 @@ const SignUp = () => {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,8 +26,16 @@ const SignUp = () => {
       password,
     };
 
-    dispatch(postSignUp(user));
-    navigate('/sign-in');
+    dispatch(postSignUp(user))
+      .then((r) => {
+        if (isFulfilled(r)) {
+          navigate('/sign-in');
+        }
+        setError(r.error.message);
+      })
+      .catch((e) => {
+        console.error('>>>>>>> error', e);
+      });
   };
   return (
     <div id="sign-up-wrapper">
@@ -77,6 +87,7 @@ const SignUp = () => {
               setPassword(e.target.value);
             }}
           />
+          {error && <p>{error}</p>}
           <button type="submit">
             <strong>Register</strong>
           </button>
