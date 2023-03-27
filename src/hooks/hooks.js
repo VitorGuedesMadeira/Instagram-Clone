@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUser } from './reducer/user';
+// import { getUser } from './reducer/user';
 
 export const useIsAuthenticated = () => !!localStorage.getItem('token');
 
