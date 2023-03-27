@@ -1,18 +1,18 @@
-/* eslint-disable */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { getUser } from './reducer/user';
+import getUser from '../redux/thunks/userThunk';
 
-export const useIsAuthenticated = () => !!localStorage.getItem('token');
-
-export const useCurrentUser = () => {
+const useCurrentUser = () => {
   const dispatch = useDispatch();
-  const currentUser = useSelector((state) => state.user.data);
+  const user = useSelector((state) => state.user);
 
   useEffect(() => {
-    dispatch(getUser());
-    dispatch(getPosts());
+    if (user.loading === null) {
+      dispatch(getUser());
+    }
   }, []);
 
-  return currentUser;
+  return user.data;
 };
+
+export default useCurrentUser;
