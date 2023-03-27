@@ -34,7 +34,7 @@ const SignUp = () => {
         setError(r.error.message);
       })
       .catch((e) => {
-        console.error('>>>>>>> error', e);
+        setError('An error occurred. Please try again later.', e);
       });
   };
   return (

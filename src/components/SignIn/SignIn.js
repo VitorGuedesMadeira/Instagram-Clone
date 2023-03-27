@@ -5,14 +5,15 @@ import { NavLink, Navigate } from 'react-router-dom';
 import facebookIcon from '../../assets/icons/facebook.png';
 import postSignIn from '../../redux/thunks/signInThunk';
 import './SignIn.scss';
-import { useIsAuthenticated } from '../../hooks/hooks';
+import useCurrentUser from '../../hooks/hooks';
+import getUser from '../../redux/thunks/userThunk';
 
 const SignIn = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const authenticated = useIsAuthenticated();
+  const currentUser = useCurrentUser();
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = {
@@ -27,12 +28,13 @@ const SignIn = () => {
     dispatch(postSignIn(user))
       .then(() => {
         setLoading(false);
+        dispatch(getUser());
       })
       .catch(() => {
         setLoading(false);
       });
   };
-  if (authenticated) {
+  if (currentUser) {
     return <Navigate to="/" />;
   }
 
